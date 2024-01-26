@@ -54,6 +54,7 @@ script = ExtResource( 5 )
 ball1 = NodePath("../Ball1")
 ball2 = NodePath("../Ball2")
 cameraNode = NodePath("../Camera2D")
+threadNodePath = NodePath("../Thread")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 smoothing_speed = 2.0
