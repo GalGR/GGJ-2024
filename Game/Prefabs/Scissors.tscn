@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/Scissors.gd" type="Script" id=1]
+[ext_resource path="res://images/Scissors.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 18, 10.5 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Scissors" type="Node2D" parent="."]
+position = Vector2( -2, 0 )
+
+[node name="Object" type="Node2D" parent="Scissors"]
+script = ExtResource( 1 )
+position1Path = NodePath("../StartPos")
+position2Path = NodePath("../EndPos")
+
+[node name="Sprite" type="Sprite" parent="Scissors/Object"]
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Scissors/Object"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scissors/Object/Area2D"]
+position = Vector2( 1, 0.5 )
+shape = SubResource( 1 )
+
+[node name="StartPos" type="Node2D" parent="Scissors"]
+position = Vector2( -26, 0 )
+
+[node name="EndPos" type="Node2D" parent="Scissors"]
+position = Vector2( 32, 1 )
