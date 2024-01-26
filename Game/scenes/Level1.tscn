@@ -19,7 +19,7 @@ extents = Vector2( 28.375, 29.5 )
 
 [node name="Balls" parent="." instance=ExtResource( 1 )]
 
-[node name="Camera2D" parent="." instance=ExtResource( 3 )]
+[node name="Camera" parent="." instance=ExtResource( 3 )]
 
 [node name="Obstacle" type="Node2D" parent="."]
 position = Vector2( 70, 1666 )

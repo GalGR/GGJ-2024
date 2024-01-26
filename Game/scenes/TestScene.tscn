@@ -18,7 +18,7 @@ script = ExtResource( 2 )
 
 [node name="Balls" parent="." instance=ExtResource( 3 )]
 
-[node name="Camera2D" parent="." instance=ExtResource( 4 )]
+[node name="Camera" parent="." instance=ExtResource( 4 )]
 
 [node name="Obstacle" type="Node2D" parent="."]
 position = Vector2( 718, 235 )
