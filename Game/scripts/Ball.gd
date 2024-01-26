@@ -14,6 +14,8 @@ var angular_velocity = 0.0
 var angular_acceleration = 0.0
 
 var ball_active : bool = false
+var isIn = false;
+
 
 func _ready()->void:
 	start_position = global_position
@@ -30,6 +32,21 @@ func init_anchor(pivot_node:Node2D):
 func set_active(active:bool):
 	ball_active = active
 
+func reverse():
+	angular_velocity = -angular_velocity
+	
+func setIn (newState: bool):
+	isIn = newState
+	
+func markIn():
+	setIn(true)
+	
+func markOut():
+	setIn(false)
+	
+func isIn():
+	return isIn
+	
 func process_velocity(delta:float)->void:
 	angular_acceleration = ((-gravity*delta) / arm_length) *sin(angle)	#Calculate acceleration (see: http://www.myphysicslab.com/pendulum1.html)
 	angular_velocity += angular_acceleration				#Increment velocity
@@ -43,11 +60,12 @@ func add_angular_velocity(force:float)->void:
 	angular_velocity += force
 
 func _physics_process(delta)->void:
-	game_input()
+	if Globals.play_scene_running:
+		game_input()
 	
-	if ball_active:
-		process_velocity(delta)
-	update()
+		if ball_active:
+			process_velocity(delta)
+		update()
 
 func game_input()->void:
 	var dir:float = 0
