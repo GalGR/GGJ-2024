@@ -14,6 +14,7 @@ var angular_velocity = 0.0
 var angular_acceleration = 0.0
 
 var ball_active : bool = false
+var isIn = false;
 
 func _ready()->void:
 	start_position = global_position
@@ -32,6 +33,19 @@ func set_active(active:bool):
 
 func reverse():
 	angular_velocity = -angular_velocity
+	
+func setIn (newState: bool):
+	isIn = newState
+	
+func markIn():
+	setIn(true)
+	
+func markOut():
+	setIn(false)
+	
+func isIn():
+	return isIn
+	
 func process_velocity(delta:float)->void:
 	angular_acceleration = ((-gravity*delta) / arm_length) *sin(angle)	#Calculate acceleration (see: http://www.myphysicslab.com/pendulum1.html)
 	angular_velocity += angular_acceleration				#Increment velocity

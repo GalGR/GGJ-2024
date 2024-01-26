@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scripts/PlayerController.gd" type="Script" id=1]
 [ext_resource path="res://scripts/Obstacle.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://images/SpikesRect.png" type="Texture" id=7]
 [ext_resource path="res://images/icon.png" type="Texture" id=8]
 [ext_resource path="res://images/pixil-frame-0.png" type="Texture" id=9]
+[ext_resource path="res://scripts/endArea.gd" type="Script" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 25, 20.5 )
@@ -18,6 +19,8 @@ extents = Vector2( 26, 25 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 28.375, 29.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
 
 [node name="Node2D" type="Node2D"]
 
@@ -380,3 +383,23 @@ margin_top = -32.0
 margin_right = 32.0
 margin_bottom = 32.0
 texture = ExtResource( 7 )
+
+[node name="endArea" type="Node2D" parent="."]
+position = Vector2( 2517, 335 )
+scale = Vector2( 4.20241, 4.00216 )
+script = ExtResource( 10 )
+
+[node name="Area2D" type="Area2D" parent="endArea"]
+scale = Vector2( -20.5386, -19.9684 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="endArea/Area2D"]
+scale = Vector2( 0.50248, 0.2635 )
+shape = SubResource( 4 )
+
+[node name="ColorRect" type="ColorRect" parent="endArea/Area2D/CollisionShape2D"]
+margin_left = -10.3067
+margin_top = -9.3551
+margin_right = 29.6933
+margin_bottom = 30.6449
+rect_scale = Vector2( 0.494728, 0.476001 )
+color = Color( 0, 1, 0, 0.266667 )
