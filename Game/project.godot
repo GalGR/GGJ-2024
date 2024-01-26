@@ -8,11 +8,21 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Position2D",
+"class": "Ball",
+"language": "GDScript",
+"path": "res://scripts/Ball.gd"
+} ]
+_global_script_class_icons={
+"Ball": ""
+}
+
 [application]
 
 config/name="GGJ24"
-run/main_scene="res://PlayScene.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://scenes/PlayScene.tscn"
+config/icon="res://images/icon.png"
 
 [gui]
 
