@@ -43,6 +43,11 @@ speed_action={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Balls"
+2d_physics/layer_2="Obstacles"
+
 [mono]
 
 project/assembly_name="GGJ24"
