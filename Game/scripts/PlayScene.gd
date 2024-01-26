@@ -1,5 +1,7 @@
 extends Node
 
+export (NodePath) var cameraNode:NodePath
+
 var player_dead = false
 var added_game_over_screen = false
 

@@ -10,7 +10,7 @@ extents = Vector2( 25, 20.5 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 26, 25 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Balls" type="Node2D"]
 
 [node name="Thread" type="Line2D" parent="."]
 points = PoolVector2Array( 126, -70, 429.87, -103.135, 502, -111 )
@@ -47,5 +47,4 @@ shape = SubResource( 2 )
 script = ExtResource( 2 )
 ball1 = NodePath("../Ball1")
 ball2 = NodePath("../Ball2")
-cameraNode = NodePath("../Camera2D")
 threadNodePath = NodePath("../Thread")
