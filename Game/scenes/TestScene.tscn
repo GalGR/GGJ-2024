@@ -1,14 +1,14 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://images/icon.png" type="Texture" id=1]
-[ext_resource path="res://scripts/Camera.gd" type="Script" id=2]
-[ext_resource path="res://scripts/Obstacle.gd" type="Script" id=3]
+[ext_resource path="res://scripts/Scissors.gd" type="Script" id=1]
+[ext_resource path="res://scripts/PlayScene.gd" type="Script" id=2]
+[ext_resource path="res://scripts/Camera.gd" type="Script" id=3]
 [ext_resource path="res://scripts/Ball.gd" type="Script" id=4]
-[ext_resource path="res://scripts/PlayerController.gd" type="Script" id=5]
-[ext_resource path="res://images/SpikesRect.png" type="Texture" id=6]
-[ext_resource path="res://scripts/Scissors.gd" type="Script" id=7]
-[ext_resource path="res://images/Scissors.png" type="Texture" id=8]
-[ext_resource path="res://scripts/PlayScene.gd" type="Script" id=9]
+[ext_resource path="res://scripts/Obstacle.gd" type="Script" id=5]
+[ext_resource path="res://scripts/PlayerController.gd" type="Script" id=6]
+[ext_resource path="res://images/icon.png" type="Texture" id=7]
+[ext_resource path="res://images/SpikesRect.png" type="Texture" id=8]
+[ext_resource path="res://images/Scissors.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 25, 20.5 )
@@ -22,7 +22,7 @@ extents = Vector2( 28.375, 29.5 )
 [sub_resource type="RectangleShape2D" id=4]
 
 [node name="Root" type="Node2D"]
-script = ExtResource( 9 )
+script = ExtResource( 2 )
 
 [node name="Thread" type="Line2D" parent="."]
 points = PoolVector2Array( 126, -70, 429.87, -103.135, 502, -111 )
@@ -32,7 +32,7 @@ position = Vector2( 637, 78 )
 script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="Ball1"]
-texture = ExtResource( 1 )
+texture = ExtResource( 7 )
 
 [node name="Area2D" type="Area2D" parent="Ball1"]
 collision_mask = 2
@@ -46,7 +46,7 @@ position = Vector2( 849, 137 )
 script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="Ball2"]
-texture = ExtResource( 1 )
+texture = ExtResource( 7 )
 
 [node name="Area2D" type="Area2D" parent="Ball2"]
 collision_mask = 2
@@ -56,7 +56,7 @@ position = Vector2( -1, 1 )
 shape = SubResource( 2 )
 
 [node name="PlayerController" type="Node" parent="."]
-script = ExtResource( 5 )
+script = ExtResource( 6 )
 ball1 = NodePath("../Ball1")
 ball2 = NodePath("../Ball2")
 cameraNode = NodePath("../Camera2D")
@@ -68,11 +68,11 @@ limit_top = 0
 limit_right = 1920
 limit_bottom = 800
 smoothing_speed = 2.0
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 
 [node name="Obstacle" type="Node2D" parent="."]
 position = Vector2( 718, 235 )
-script = ExtResource( 3 )
+script = ExtResource( 5 )
 
 [node name="Area2D" type="Area2D" parent="Obstacle"]
 collision_layer = 2
@@ -86,17 +86,18 @@ margin_left = -32.0
 margin_top = -32.0
 margin_right = 32.0
 margin_bottom = 32.0
-texture = ExtResource( 6 )
+texture = ExtResource( 8 )
 
 [node name="Scissors" type="Node2D" parent="."]
+visible = false
 position = Vector2( 315, 94 )
-script = ExtResource( 7 )
+script = ExtResource( 1 )
 position1Path = NodePath("../PositionStartScissors")
 position2Path = NodePath("../PositionEndScissors")
 
 [node name="Sprite" type="Sprite" parent="Scissors"]
 position = Vector2( 23, 83 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 
 [node name="Area2D" type="Area2D" parent="Scissors"]
 
