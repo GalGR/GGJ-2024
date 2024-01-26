@@ -17,13 +17,13 @@ func _ready():
 	activeBall = ballNode1
 	anchoredBall = ballNode2
 	camera = (get_node(cameraNode) as Camera2D)
-	camera.position = anchoredBall.position
+	#camera.position = anchoredBall.position
 	# Don't enable smoothing in the editor so we can jump immediately to the position on start
 	camera.smoothing_enabled = true
 
 func _process(delta):
 	game_input()
-	camera.position = anchoredBall.position
+	#camera.position = anchoredBall.position
 
 func game_input()->void:
 	var dir:float = 0
