@@ -21,8 +21,12 @@ _global_script_class_icons={
 [application]
 
 config/name="GGJ24"
-run/main_scene="res://scenes/PlayScene.tscn"
+run/main_scene="res://scenes/TestScene.tscn"
 config/icon="res://images/icon.png"
+
+[autoload]
+
+Globals="*res://scripts/Globals.gd"
 
 [gui]
 

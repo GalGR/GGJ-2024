@@ -16,6 +16,7 @@ var angular_acceleration = 0.0
 var ball_active : bool = false
 var isIn = false;
 
+
 func _ready()->void:
 	start_position = global_position
 
@@ -59,11 +60,12 @@ func add_angular_velocity(force:float)->void:
 	angular_velocity += force
 
 func _physics_process(delta)->void:
-	game_input()
+	if Globals.play_scene_running:
+		game_input()
 	
-	if ball_active:
-		process_velocity(delta)
-	update()
+		if ball_active:
+			process_velocity(delta)
+		update()
 
 func game_input()->void:
 	var dir:float = 0
