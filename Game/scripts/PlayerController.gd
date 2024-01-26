@@ -2,12 +2,10 @@ extends Node
 
 export (NodePath) var ball1:NodePath
 export (NodePath) var ball2:NodePath
-export (NodePath) var cameraNode:NodePath
 export (NodePath) var threadNodePath:NodePath
 
 var ballNode1 : Node2D
 var ballNode2 : Node2D
-var camera : Camera2D
 var thread : Line2D
 
 var activeBall : Node2D
@@ -20,10 +18,6 @@ func _ready():
 	ballNode2 = (get_node(ball2) as Node2D)
 	activeBall = ballNode1
 	anchoredBall = ballNode2
-	camera = (get_node(cameraNode) as Camera2D)
-	camera.position[1] = anchoredBall.position[1]
-	# Don't enable smoothing in the editor so we can jump immediately to the position on start
-	camera.smoothing_enabled = true
 	thread = (get_node(threadNodePath) as Line2D)
 	thread.clear_points()
 	thread.add_point(ballNode1.global_position)
@@ -32,7 +26,6 @@ func _ready():
 func _process(delta):
 	if Globals.play_scene_running:
 		game_input()
-		camera.position[1] =  anchoredBall.position[1]
 		updateThread()
 
 func game_input()->void:
