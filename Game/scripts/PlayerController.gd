@@ -13,6 +13,8 @@ var thread : Line2D
 var activeBall : Node2D
 var anchoredBall : Node2D
 
+
+
 func _ready():
 	ballNode1 = (get_node(ball1) as Node2D)
 	ballNode2 = (get_node(ball2) as Node2D)
@@ -28,9 +30,10 @@ func _ready():
 	thread.add_point(ballNode2.global_position)
 
 func _process(delta):
-	game_input()
-	camera.position = anchoredBall.position
-	updateThread()
+	if Globals.play_scene_running:
+		game_input()
+		camera.position = anchoredBall.position
+		updateThread()
 
 func game_input()->void:
 	var dir:float = 0
