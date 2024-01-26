@@ -28,9 +28,10 @@ func _ready():
 	thread.add_point(ballNode2.global_position)
 
 func _process(delta):
-	game_input()
-	#camera.position = anchoredBall.position
-	updateThread()
+	if Globals.play_scene_running:
+		game_input()
+		#camera.position = anchoredBall.position
+		updateThread()
 
 func game_input()->void:
 	var dir:float = 0
