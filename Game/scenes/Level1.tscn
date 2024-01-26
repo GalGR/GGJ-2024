@@ -1,0 +1,382 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scripts/PlayerController.gd" type="Script" id=1]
+[ext_resource path="res://scripts/Obstacle.gd" type="Script" id=2]
+[ext_resource path="res://scripts/Camera.gd" type="Script" id=3]
+[ext_resource path="res://scripts/Ball.gd" type="Script" id=4]
+[ext_resource path="res://images/Door.png" type="Texture" id=5]
+[ext_resource path="res://images/Button.png" type="Texture" id=6]
+[ext_resource path="res://images/SpikesRect.png" type="Texture" id=7]
+[ext_resource path="res://images/icon.png" type="Texture" id=8]
+[ext_resource path="res://images/pixil-frame-0.png" type="Texture" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 25, 20.5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 26, 25 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 28.375, 29.5 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Thread" type="Line2D" parent="."]
+points = PoolVector2Array( 126, -70, 429.87, -103.135, 502, -111 )
+
+[node name="Ball1" type="Position2D" parent="."]
+position = Vector2( 530, 211 )
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="Ball1"]
+texture = ExtResource( 8 )
+
+[node name="Area2D" type="Area2D" parent="Ball1"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball1/Area2D"]
+position = Vector2( 2, -0.5 )
+shape = SubResource( 1 )
+
+[node name="Ball2" type="Position2D" parent="."]
+position = Vector2( 219, 210 )
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="Ball2"]
+texture = ExtResource( 8 )
+
+[node name="Area2D" type="Area2D" parent="Ball2"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball2/Area2D"]
+position = Vector2( -1, 1 )
+shape = SubResource( 2 )
+
+[node name="PlayerController" type="Node" parent="."]
+script = ExtResource( 1 )
+ball1 = NodePath("../Ball1")
+ball2 = NodePath("../Ball2")
+cameraNode = NodePath("../Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 1517, 309 )
+zoom = Vector2( 5, 5 )
+limit_left = 0
+limit_top = 0
+smoothing_speed = 2.0
+script = ExtResource( 3 )
+
+[node name="Obstacle" type="Node2D" parent="."]
+position = Vector2( 70, 1666 )
+scale = Vector2( 2.28, 47.64 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Obstacle"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle/Area2D"]
+position = Vector2( 8.375, -3.5 )
+shape = SubResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="Obstacle/Area2D/CollisionShape2D"]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 7 )
+
+[node name="Obstacle5" type="Node2D" parent="."]
+position = Vector2( 966, 834 )
+scale = Vector2( 38.0869, -1.7245 )
+script = ExtResource( 2 )
+door = NodePath("../Obstacle7")
+
+[node name="Area2D" type="Area2D" parent="Obstacle5"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle5/Area2D"]
+position = Vector2( 8.375, -3.5 )
+shape = SubResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="Obstacle5/Area2D/CollisionShape2D"]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 7 )
+
+[node name="Obstacle4" type="Node2D" parent="."]
+position = Vector2( 5028, 1536 )
+scale = Vector2( 2.28, 48.28 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Obstacle4"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle4/Area2D"]
+position = Vector2( 8.375, -3.5 )
+shape = SubResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="Obstacle4/Area2D/CollisionShape2D"]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 7 )
+
+[node name="Obstacle6" type="Node2D" parent="."]
+position = Vector2( 3072, 717 )
+scale = Vector2( 2.28, 19.56 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Obstacle6"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle6/Area2D"]
+position = Vector2( 8.375, -3.5 )
+shape = SubResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="Obstacle6/Area2D/CollisionShape2D"]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 7 )
+
+[node name="Obstacle15" type="Node2D" parent="."]
+position = Vector2( 2419, 1298 )
+scale = Vector2( 2.28, 13.92 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Obstacle15"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle15/Area2D"]
+position = Vector2( 8.375, -3.5 )
+shape = SubResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="Obstacle15/Area2D/CollisionShape2D"]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 7 )
+
+[node name="Obstacle7" type="Node2D" parent="."]
+position = Vector2( 2748, 1625 )
+scale = Vector2( 1.64, 23.08 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Obstacle7"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle7/Area2D"]
+position = Vector2( 8.375, -3.5 )
+shape = SubResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="Obstacle7/Area2D/CollisionShape2D"]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 7 )
+
+[node name="Obstacle11" type="Node2D" parent="."]
+position = Vector2( 919, 1783 )
+scale = Vector2( 1.6, 16.8 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Obstacle11"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle11/Area2D"]
+position = Vector2( 8.375, -3.5 )
+shape = SubResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="Obstacle11/Area2D/CollisionShape2D"]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 7 )
+
+[node name="Obstacle14" type="Node2D" parent="."]
+position = Vector2( 3888, 2796 )
+scale = Vector2( 1.6, 7.32001 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Obstacle14"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle14/Area2D"]
+position = Vector2( 8.375, -3.5 )
+shape = SubResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="Obstacle14/Area2D/CollisionShape2D"]
+visible = false
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 7 )
+
+[node name="TextureRect2" type="TextureRect" parent="Obstacle14/Area2D/CollisionShape2D"]
+margin_left = -15.875
+margin_top = -25.4618
+margin_right = 24.125
+margin_bottom = 14.5382
+rect_scale = Vector2( 1.23469, 0.845069 )
+texture = ExtResource( 5 )
+
+[node name="Obstacle12" type="Node2D" parent="."]
+position = Vector2( 1710, 1637 )
+scale = Vector2( 5.5725, 4.89435 )
+script = ExtResource( 2 )
+isButton = true
+door = NodePath("../Obstacle14")
+
+[node name="Area2D" type="Area2D" parent="Obstacle12"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle12/Area2D"]
+position = Vector2( 8.375, -3.5 )
+shape = SubResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="Obstacle12/Area2D/CollisionShape2D"]
+visible = false
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 7 )
+
+[node name="TextureRect2" type="TextureRect" parent="Obstacle12/Area2D/CollisionShape2D"]
+margin_left = -25.2436
+margin_top = -27.7606
+margin_right = 14.7564
+margin_bottom = 12.2394
+rect_scale = Vector2( 0.799571, 0.849813 )
+texture = ExtResource( 6 )
+
+[node name="Obstacle13" type="Node2D" parent="."]
+position = Vector2( 3619, 1864 )
+scale = Vector2( 7.12063, 10.9367 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Obstacle13"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle13/Area2D"]
+position = Vector2( 8.375, -3.5 )
+shape = SubResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="Obstacle13/Area2D/CollisionShape2D"]
+visible = false
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 7 )
+
+[node name="TextureRect2" type="TextureRect" parent="Obstacle13/Area2D/CollisionShape2D"]
+margin_left = -36.0066
+margin_top = -29.7738
+margin_right = 27.9934
+margin_bottom = 34.2262
+rect_scale = Vector2( 1, 0.943303 )
+texture = ExtResource( 9 )
+
+[node name="Obstacle9" type="Node2D" parent="."]
+position = Vector2( 564, 2000 )
+scale = Vector2( 1.6, 23.08 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Obstacle9"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle9/Area2D"]
+position = Vector2( 8.375, -3.5 )
+shape = SubResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="Obstacle9/Area2D/CollisionShape2D"]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 7 )
+
+[node name="Obstacle2" type="Node2D" parent="."]
+position = Vector2( 2071, 2956 )
+scale = Vector2( 85.2, 1 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Obstacle2"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle2/Area2D"]
+position = Vector2( 8.375, -3.5 )
+shape = SubResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="Obstacle2/Area2D/CollisionShape2D"]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 7 )
+
+[node name="Obstacle8" type="Node2D" parent="."]
+position = Vector2( 1791, 2588 )
+scale = Vector2( 54.331, 1.59122 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Obstacle8"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle8/Area2D"]
+position = Vector2( 8.375, -3.5 )
+shape = SubResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="Obstacle8/Area2D/CollisionShape2D"]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 7 )
+
+[node name="Obstacle10" type="Node2D" parent="."]
+position = Vector2( 1638, 2207 )
+scale = Vector2( 29.251, 1.23122 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Obstacle10"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle10/Area2D"]
+position = Vector2( 8.375, -3.5 )
+shape = SubResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="Obstacle10/Area2D/CollisionShape2D"]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 7 )
+
+[node name="Obstacle3" type="Node2D" parent="."]
+position = Vector2( 2068, 23 )
+scale = Vector2( 87.4, 1 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Obstacle3"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle3/Area2D"]
+position = Vector2( 8.375, -3.5 )
+shape = SubResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="Obstacle3/Area2D/CollisionShape2D"]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 7 )

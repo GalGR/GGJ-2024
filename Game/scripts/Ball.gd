@@ -30,6 +30,8 @@ func init_anchor(pivot_node:Node2D):
 func set_active(active:bool):
 	ball_active = active
 
+func reverse():
+	angular_velocity = -angular_velocity
 func process_velocity(delta:float)->void:
 	angular_acceleration = ((-gravity*delta) / arm_length) *sin(angle)	#Calculate acceleration (see: http://www.myphysicslab.com/pendulum1.html)
 	angular_velocity += angular_acceleration				#Increment velocity
