@@ -21,7 +21,7 @@ func _ready():
 	activeBall = ballNode1
 	anchoredBall = ballNode2
 	camera = (get_node(cameraNode) as Camera2D)
-	camera.position = anchoredBall.position
+	#camera.position = anchoredBall.position
 	# Don't enable smoothing in the editor so we can jump immediately to the position on start
 	#camera.smoothing_enabled = true
 	thread = (get_node(threadNodePath) as Line2D)
@@ -32,7 +32,7 @@ func _ready():
 func _process(delta):
 	if Globals.play_scene_running:
 		game_input()
-		camera.position = anchoredBall.position
+		#camera.position = anchoredBall.position
 		updateThread()
 
 func game_input()->void:
