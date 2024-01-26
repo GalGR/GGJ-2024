@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scenes/GameOverScene.gd" type="Script" id=1]
+[ext_resource path="res://scripts/GameOverScene.gd" type="Script" id=1]
 
 [sub_resource type="DynamicFont" id=1]
 size = 66
