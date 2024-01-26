@@ -19,6 +19,7 @@ func _process(delta):
 	
 func _onAreaEntered(areaEntered:Area2D):
 	if areaEntered.get_parent() is Ball:
+		areaEntered.get_parent().reverse()
 		if (isButton):
 			if (!pressed):
 				Door.die()
