@@ -27,6 +27,7 @@ config/icon="res://images/icon.png"
 [autoload]
 
 Globals="*res://scripts/Globals.gd"
+PlayScene="*res://scripts/PlayScene.gd"
 
 [gui]
 

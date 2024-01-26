@@ -35,7 +35,7 @@ func game_input()->void:
 		
 func switch_balls()->void:
 	if (activeBall.isIn() and anchoredBall.isIn()):
-		print("You Won!")
+		Globals.emit_signal("game_won")
 	if activeBall == ballNode1:
 		anchoredBall = ballNode1
 		activeBall = ballNode2
