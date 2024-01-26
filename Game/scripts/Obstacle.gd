@@ -25,4 +25,4 @@ func _onAreaEntered(areaEntered:Area2D):
 				Door.die()
 				pressed = !pressed
 		else:
-			Globals.emit_signal("pla	yer_hit_obstacle")
+			Globals.emit_signal("player_hit_obstacle")
