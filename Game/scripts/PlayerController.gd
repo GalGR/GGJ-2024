@@ -11,6 +11,8 @@ var thread : Line2D
 var activeBall : Node2D
 var anchoredBall : Node2D
 
+
+
 func _ready():
 	ballNode1 = (get_node(ball1) as Node2D)
 	ballNode2 = (get_node(ball2) as Node2D)
