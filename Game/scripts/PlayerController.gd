@@ -28,15 +28,16 @@ func _ready():
 	thread.add_point(ballNode2.global_position)
 
 func _process(delta):
-	game_input()
-	#camera.position = anchoredBall.position
-	updateThread()
+	if Globals.play_scene_running:
+		game_input()
+		#camera.position = anchoredBall.position
+		updateThread()
 
 func game_input()->void:
 	var dir:float = 0
 	if Input.is_action_just_pressed("anchor_action"):
 		switch_balls()
-
+		
 func switch_balls()->void:
 	if activeBall == ballNode1:
 		anchoredBall = ballNode1
@@ -44,7 +45,7 @@ func switch_balls()->void:
 	else:
 		anchoredBall = ballNode2
 		activeBall = ballNode1
-
+			
 	anchoredBall.set_active(false)
 	activeBall.set_active(true)
 	activeBall.init_anchor(anchoredBall)
@@ -53,4 +54,4 @@ func updateThread()->void:
 	thread.set_point_position(0, ballNode1.global_position)
 	thread.set_point_position(1, ballNode2.global_position)
 
-
+	

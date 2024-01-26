@@ -13,4 +13,4 @@ func _process(delta):
 	
 func _onAreaEntered(areaEntered:Area2D):
 	if areaEntered.get_parent() is Ball:
-		get_tree().reload_current_scene()
+		Globals.emit_signal("player_hit_obstacle")
