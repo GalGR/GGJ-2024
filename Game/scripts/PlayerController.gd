@@ -12,6 +12,7 @@ var activeBall : Node2D
 var anchoredBall : Node2D
 
 
+onready var camera : Camera2D = $"../../Camera2D"
 func _ready():
 	ballNode1 = (get_node(ball1) as Node2D)
 	ballNode2 = (get_node(ball2) as Node2D)
@@ -21,11 +22,16 @@ func _ready():
 	thread.clear_points()
 	thread.add_point(ballNode1.global_position)
 	thread.add_point(ballNode2.global_position)
+	camera.reset_smoothing();
+	camera.position = anchoredBall.position
+	
 
 func _process(delta):
 	if Globals.play_scene_running:
 		game_input()
 		updateThread()
+		camera.smoothing_enabled = true
+		camera.position = anchoredBall.position
 
 func game_input()->void:
 	var dir:float = 0
