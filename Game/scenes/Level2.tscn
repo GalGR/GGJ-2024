@@ -19,7 +19,7 @@ extents = Vector2( 28.375, 29.5 )
 
 [sub_resource type="RectangleShape2D" id=4]
 
-[node name="Node2D" type="Node2D"]
+[node name="LevelRoot" type="Node2D"]
 
 [node name="Thread" type="Line2D" parent="."]
 points = PoolVector2Array( 126, -70, 429.87, -103.135, 502, -111 )
