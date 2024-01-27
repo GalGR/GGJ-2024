@@ -19,6 +19,7 @@ points = PoolVector2Array( 126, -70, 429.87, -103.135, 502, -111 )
 [node name="Ball1" type="Position2D" parent="."]
 position = Vector2( 637, 78 )
 script = ExtResource( 3 )
+damping = 1.0
 
 [node name="Sprite" type="Sprite" parent="Ball1"]
 texture = ExtResource( 1 )
@@ -33,6 +34,7 @@ shape = SubResource( 1 )
 [node name="Ball2" type="Position2D" parent="."]
 position = Vector2( 849, 137 )
 script = ExtResource( 3 )
+damping = 1.0
 
 [node name="Sprite" type="Sprite" parent="Ball2"]
 texture = ExtResource( 4 )
