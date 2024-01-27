@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/GameOverScene.gd" type="Script" id=1]
+[ext_resource path="res://fonts/Roboto/Roboto-Regular.ttf" type="DynamicFontData" id=2]
 
-[sub_resource type="DynamicFont" id=1]
-size = 66
+[sub_resource type="DynamicFont" id=5]
+size = 65
+font_data = ExtResource( 2 )
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -112,29 +114,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 0 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_right = 100.0
-margin_bottom = 100.0
-custom_fonts/normal_font = SubResource( 1 )
-text = "Game Over
-"
-
 [node name="Label" type="Label" parent="Control"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -36.5
-margin_top = -7.0
-margin_right = 36.5
-margin_bottom = 7.0
-rect_scale = Vector2( 1.70515, 2.47826 )
+margin_left = -406.5
+margin_top = -78.5
+margin_right = 406.5
+margin_bottom = 78.5
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Game Over"
+custom_fonts/font = SubResource( 5 )
+text = "You made the balls unhappy
+Space to restart"
+align = 1
+valign = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 2 )

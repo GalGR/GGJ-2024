@@ -22,16 +22,18 @@ func _ready():
 	thread.clear_points()
 	thread.add_point(ballNode1.global_position)
 	thread.add_point(ballNode2.global_position)
-	camera.reset_smoothing();
-	camera.position = anchoredBall.position
+	if camera:
+		camera.reset_smoothing();
+		camera.position = anchoredBall.position
 	
 
 func _process(delta):
 	if Globals.play_scene_running:
 		game_input()
 		updateThread()
-		camera.smoothing_enabled = true
-		camera.position = anchoredBall.position
+		if camera:
+			camera.smoothing_enabled = true
+			camera.position = anchoredBall.position
 
 func game_input()->void:
 	var dir:float = 0
@@ -54,6 +56,7 @@ func switch_balls()->void:
 	var particles = load("res://scenes/BallAnchoredParticles.tscn").instance()
 	particles.position = anchoredBall.position
 	get_parent().add_child(particles)
+	
 	#ball_anchored_particles.position = anchoredBall.position
 	#ball_anchored_particles.restart()
 
