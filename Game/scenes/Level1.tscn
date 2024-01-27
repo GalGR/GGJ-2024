@@ -14,7 +14,212 @@ position = Vector2( 491, 277 )
 scale = Vector2( 1.62178, 2.47435 )
 
 [node name="Obstacle" parent="." instance=ExtResource( 4 )]
-position = Vector2( 724, 189 )
+position = Vector2( 992, 33 )
+Deadly = false
+
+[node name="Obstacle11" parent="." instance=ExtResource( 4 )]
+position = Vector2( 992, -29 )
+Deadly = false
+
+[node name="Obstacle12" parent="." instance=ExtResource( 4 )]
+position = Vector2( 930, -31 )
+Deadly = false
+
+[node name="Obstacle13" parent="." instance=ExtResource( 4 )]
+position = Vector2( 867, -32 )
+Deadly = false
+
+[node name="Obstacle14" parent="." instance=ExtResource( 4 )]
+position = Vector2( 809, -31 )
+Deadly = false
+
+[node name="Obstacle26" parent="." instance=ExtResource( 4 )]
+position = Vector2( 76, -34 )
+Deadly = false
+
+[node name="Obstacle27" parent="." instance=ExtResource( 4 )]
+position = Vector2( 18, -33 )
+Deadly = false
+
+[node name="Obstacle15" parent="." instance=ExtResource( 4 )]
+position = Vector2( 747, -33 )
+Deadly = false
+
+[node name="Obstacle16" parent="." instance=ExtResource( 4 )]
+position = Vector2( 684, -34 )
+Deadly = false
+
+[node name="Obstacle17" parent="." instance=ExtResource( 4 )]
+position = Vector2( 620, -31 )
+Deadly = false
+
+[node name="Obstacle18" parent="." instance=ExtResource( 4 )]
+position = Vector2( 558, -33 )
+Deadly = false
+
+[node name="Obstacle19" parent="." instance=ExtResource( 4 )]
+position = Vector2( 495, -34 )
+Deadly = false
+
+[node name="Obstacle20" parent="." instance=ExtResource( 4 )]
+position = Vector2( 430, -35 )
+Deadly = false
+
+[node name="Obstacle21" parent="." instance=ExtResource( 4 )]
+position = Vector2( 368, -37 )
+Deadly = false
+
+[node name="Obstacle22" parent="." instance=ExtResource( 4 )]
+position = Vector2( 305, -38 )
+Deadly = false
+
+[node name="Obstacle23" parent="." instance=ExtResource( 4 )]
+position = Vector2( 241, -35 )
+Deadly = false
+
+[node name="Obstacle24" parent="." instance=ExtResource( 4 )]
+position = Vector2( 179, -37 )
+Deadly = false
+
+[node name="Obstacle25" parent="." instance=ExtResource( 4 )]
+position = Vector2( 116, -38 )
+Deadly = false
+
+[node name="Obstacle38" parent="." instance=ExtResource( 4 )]
+position = Vector2( 930, 586 )
+Deadly = false
+
+[node name="Obstacle39" parent="." instance=ExtResource( 4 )]
+position = Vector2( 867, 585 )
+Deadly = false
+
+[node name="Obstacle40" parent="." instance=ExtResource( 4 )]
+position = Vector2( 809, 586 )
+Deadly = false
+
+[node name="Obstacle41" parent="." instance=ExtResource( 4 )]
+position = Vector2( 76, 583 )
+Deadly = false
+
+[node name="Obstacle42" parent="." instance=ExtResource( 4 )]
+position = Vector2( 747, 584 )
+Deadly = false
+
+[node name="Obstacle43" parent="." instance=ExtResource( 4 )]
+position = Vector2( 684, 583 )
+Deadly = false
+
+[node name="Obstacle44" parent="." instance=ExtResource( 4 )]
+position = Vector2( 620, 586 )
+Deadly = false
+
+[node name="Obstacle45" parent="." instance=ExtResource( 4 )]
+position = Vector2( 558, 584 )
+Deadly = false
+
+[node name="Obstacle46" parent="." instance=ExtResource( 4 )]
+position = Vector2( 495, 583 )
+Deadly = false
+
+[node name="Obstacle47" parent="." instance=ExtResource( 4 )]
+position = Vector2( 430, 582 )
+Deadly = false
+
+[node name="Obstacle48" parent="." instance=ExtResource( 4 )]
+position = Vector2( 368, 580 )
+Deadly = false
+
+[node name="Obstacle49" parent="." instance=ExtResource( 4 )]
+position = Vector2( 305, 579 )
+Deadly = false
+
+[node name="Obstacle50" parent="." instance=ExtResource( 4 )]
+position = Vector2( 241, 582 )
+Deadly = false
+
+[node name="Obstacle51" parent="." instance=ExtResource( 4 )]
+position = Vector2( 179, 580 )
+Deadly = false
+
+[node name="Obstacle52" parent="." instance=ExtResource( 4 )]
+position = Vector2( 116, 579 )
+Deadly = false
+
+[node name="Obstacle2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 993, 94 )
+Deadly = false
+
+[node name="Obstacle3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 993, 158 )
+Deadly = false
+
+[node name="Obstacle4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 993, 220 )
+Deadly = false
+
+[node name="Obstacle5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 993, 282 )
+Deadly = false
+
+[node name="Obstacle6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 994, 339 )
+Deadly = false
+
+[node name="Obstacle7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 995, 400 )
+Deadly = false
+
+[node name="Obstacle8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 995, 464 )
+Deadly = false
+
+[node name="Obstacle9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 995, 526 )
+Deadly = false
+
+[node name="Obstacle10" parent="." instance=ExtResource( 4 )]
+position = Vector2( 995, 588 )
+Deadly = false
+
+[node name="Obstacle28" parent="." instance=ExtResource( 4 )]
+position = Vector2( 16, 29 )
+Deadly = false
+
+[node name="Obstacle29" parent="." instance=ExtResource( 4 )]
+position = Vector2( 17, 90 )
+Deadly = false
+
+[node name="Obstacle30" parent="." instance=ExtResource( 4 )]
+position = Vector2( 17, 154 )
+Deadly = false
+
+[node name="Obstacle31" parent="." instance=ExtResource( 4 )]
+position = Vector2( 17, 216 )
+Deadly = false
+
+[node name="Obstacle32" parent="." instance=ExtResource( 4 )]
+position = Vector2( 17, 278 )
+Deadly = false
+
+[node name="Obstacle33" parent="." instance=ExtResource( 4 )]
+position = Vector2( 18, 335 )
+Deadly = false
+
+[node name="Obstacle34" parent="." instance=ExtResource( 4 )]
+position = Vector2( 19, 396 )
+Deadly = false
+
+[node name="Obstacle35" parent="." instance=ExtResource( 4 )]
+position = Vector2( 19, 460 )
+Deadly = false
+
+[node name="Obstacle36" parent="." instance=ExtResource( 4 )]
+position = Vector2( 19, 522 )
+Deadly = false
+
+[node name="Obstacle37" parent="." instance=ExtResource( 4 )]
+position = Vector2( 19, 584 )
+Deadly = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

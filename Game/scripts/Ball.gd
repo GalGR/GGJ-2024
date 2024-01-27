@@ -15,6 +15,7 @@ var rotationSpeed = 0.3
 var angularClamp = 0.4
 var angular_velocity = 0.0
 var angular_acceleration = 0.0
+var reversed = false
 
 
 var ball_active : bool = false
@@ -55,7 +56,9 @@ func set_active(active:bool):
 		get_parent().get_parent().add_child(anchoredSprite)
 
 func reverse():
-	angular_velocity = -angular_velocity
+	if !reversed:
+		reversed = true
+		angular_velocity = -angular_velocity
 	
 func setIn (newState: bool):
 	isIn = newState
@@ -90,6 +93,7 @@ func _physics_process(delta)->void:
 	
 		if ball_active:
 			process_velocity(delta)
+		reversed = false
 		update()
 
 func game_input()->void:
