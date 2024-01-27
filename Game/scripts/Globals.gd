@@ -6,6 +6,7 @@ signal level_won
 signal level_won_scene_finished
 signal game_started
 signal game_won
+signal restart_level
 
 var play_scene_running : bool = true
 

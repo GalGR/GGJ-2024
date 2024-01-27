@@ -1,37 +1,44 @@
 extends Node
 
 var player_dead = false
-var added_game_over_screen = false
-var added_game_win_screen = false
+var scene_transition_active = false
 
 func _ready():
 	Globals.connect("player_hit_obstacle", self, "on_player_hit_obstacle")
 	Globals.connect("game_over_finished", self, "on_game_over_finished")
 	Globals.connect("level_won_scene_finished", self, "on_new_level")
 	Globals.connect("level_won", self, "on_player_win")
+	Globals.connect("restart_level", self, "on_player_hit_restart")
 
 func on_player_hit_obstacle():
-	if !added_game_over_screen :
+	if !scene_transition_active:
 		var gameOverScreen = load("res://scenes/GameOverScene.tscn").instance()
 		add_child(gameOverScreen)
-		added_game_over_screen = true
+		scene_transition_active = true
+		Globals.play_scene_running = false
+
+func on_player_hit_restart():
+	if !scene_transition_active:
+		var restartLevelScreen = load("res://scenes/RestartLevelScreen.tscn").instance()
+		add_child(restartLevelScreen)
+		scene_transition_active = true
 		Globals.play_scene_running = false
 		
 func on_player_win():
-	if !added_game_win_screen :
+	if !scene_transition_active:
 		print ("win screen")
 		var gameWonScreen = load("res://scenes/LevelWonScene.tscn").instance()
 		add_child(gameWonScreen)
-		added_game_win_screen = true
+		scene_transition_active = true
 		Globals.play_scene_running = false
 		
 func on_game_over_finished():
 	get_tree().reload_current_scene()
-	added_game_over_screen = false
+	scene_transition_active = false
 
 func on_new_level():
 	Globals.currentLevelNum+=1
-	added_game_win_screen = false
+	scene_transition_active = false
 	var nextLevel = "res://scenes/Level%d.tscn" % Globals.currentLevelNum
 	if ResourceLoader.exists(nextLevel):
 		print("Advancing to the next level: \"%s\"" % nextLevel)

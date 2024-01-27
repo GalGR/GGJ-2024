@@ -35,14 +35,13 @@ func _process(delta):
 	if Globals.play_scene_running:
 		game_input()
 		updateThread()
-		if camera and Globals.currentLevelNum!=5:
-			camera.smoothing_enabled = true
-			camera.position = anchoredBall.position
 
 func game_input()->void:
 	var dir:float = 0
 	if Input.is_action_just_pressed("anchor_action"):
 		switch_balls()
+	if Input.is_action_just_pressed("restart_level"):
+		Globals.emit_signal("restart_level")
 		
 func switch_balls()->void:
 	if (activeBall.isIn() and anchoredBall.isIn()):
