@@ -13,6 +13,7 @@ export (float) var damping = 0.995 							#Arbitrary dampening force
 var angular_velocity = 0.0
 var angular_acceleration = 0.0
 
+
 var ball_active : bool = false
 var isIn = false;
 

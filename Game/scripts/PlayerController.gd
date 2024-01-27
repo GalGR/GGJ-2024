@@ -12,7 +12,6 @@ var activeBall : Node2D
 var anchoredBall : Node2D
 
 
-
 func _ready():
 	ballNode1 = (get_node(ball1) as Node2D)
 	ballNode2 = (get_node(ball2) as Node2D)
@@ -46,6 +45,11 @@ func switch_balls()->void:
 	anchoredBall.set_active(false)
 	activeBall.set_active(true)
 	activeBall.init_anchor(anchoredBall)
+	var particles = load("res://scenes/BallAnchoredParticles.tscn").instance()
+	particles.position = anchoredBall.position
+	get_parent().add_child(particles)
+	#ball_anchored_particles.position = anchoredBall.position
+	#ball_anchored_particles.restart()
 
 func updateThread()->void:
 	thread.set_point_position(0, ballNode1.global_position)
