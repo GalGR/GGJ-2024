@@ -22,7 +22,7 @@ func _ready():
 	thread.clear_points()
 	thread.add_point(ballNode1.global_position)
 	thread.add_point(ballNode2.global_position)
-	if camera:
+	if camera and Globals.currentLevelNum!=5:
 		print ("got camera")
 		camera.reset_smoothing();
 		camera.position = anchoredBall.position
@@ -35,7 +35,7 @@ func _process(delta):
 	if Globals.play_scene_running:
 		game_input()
 		updateThread()
-		if camera:
+		if camera and Globals.currentLevelNum!=5:
 			camera.smoothing_enabled = true
 			camera.position = anchoredBall.position
 

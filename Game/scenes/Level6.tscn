@@ -1,133 +1,42 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://prefabs/Balls.tscn" type="PackedScene" id=1]
-[ext_resource path="res://prefabs/Camera.tscn" type="PackedScene" id=2]
-[ext_resource path="res://images/SpikesRect.png" type="Texture" id=3]
-[ext_resource path="res://scripts/endArea.gd" type="Script" id=4]
-[ext_resource path="res://scripts/Obstacle.gd" type="Script" id=5]
+[ext_resource path="res://scenes/Background.tscn" type="PackedScene" id=1]
+[ext_resource path="res://prefabs/Deadly.tscn" type="PackedScene" id=2]
+[ext_resource path="res://prefabs/Obstacle.tscn" type="PackedScene" id=3]
+[ext_resource path="res://prefabs/Balls.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/endArea.gd" type="Script" id=5]
 [ext_resource path="res://scripts/Button.gd" type="Script" id=6]
-[ext_resource path="res://images/Button.png" type="Texture" id=7]
+[ext_resource path="res://scripts/Obstacle.gd" type="Script" id=7]
 [ext_resource path="res://images/Door.png" type="Texture" id=8]
+[ext_resource path="res://images/SpikesRect.png" type="Texture" id=9]
+[ext_resource path="res://images/Button.png" type="Texture" id=10]
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 28.375, 29.5 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=2]
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=3]
 
 [node name="LevelRoot" type="Node2D"]
 
-[node name="Balls" parent="." instance=ExtResource( 1 )]
+[node name="Background" parent="." instance=ExtResource( 1 )]
 
-[node name="Camera" parent="." instance=ExtResource( 2 )]
-
-[node name="Obstacle" type="Node2D" parent="."]
-position = Vector2( 70, 1666 )
-scale = Vector2( 2.28, 47.64 )
-script = ExtResource( 5 )
-
-[node name="Area2D" type="Area2D" parent="Obstacle"]
-collision_layer = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle/Area2D"]
-position = Vector2( 8.375, -3.5 )
-shape = SubResource( 3 )
-
-[node name="TextureRect" type="TextureRect" parent="Obstacle/Area2D/CollisionShape2D"]
-margin_left = -32.0
-margin_top = -32.0
-margin_right = 32.0
-margin_bottom = 32.0
-texture = ExtResource( 3 )
-
-[node name="Obstacle5" type="Node2D" parent="."]
-position = Vector2( 966, 834 )
-scale = Vector2( 38.0869, -1.7245 )
-script = ExtResource( 5 )
-
-[node name="Area2D" type="Area2D" parent="Obstacle5"]
-collision_layer = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle5/Area2D"]
-position = Vector2( 8.375, -3.5 )
-shape = SubResource( 3 )
-
-[node name="TextureRect" type="TextureRect" parent="Obstacle5/Area2D/CollisionShape2D"]
-margin_left = -32.0
-margin_top = -32.0
-margin_right = 32.0
-margin_bottom = 32.0
-texture = ExtResource( 3 )
-
-[node name="Obstacle7" type="Node2D" parent="."]
-position = Vector2( 1753, 1562 )
-scale = Vector2( 88.6869, -1.7245 )
-script = ExtResource( 5 )
-
-[node name="Area2D" type="Area2D" parent="Obstacle7"]
-collision_layer = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle7/Area2D"]
-position = Vector2( 8.375, -3.5 )
-shape = SubResource( 3 )
-
-[node name="TextureRect" type="TextureRect" parent="Obstacle7/Area2D/CollisionShape2D"]
-margin_left = -32.0
-margin_top = -32.0
-margin_right = 32.0
-margin_bottom = 32.0
-texture = ExtResource( 3 )
-
-[node name="Obstacle4" type="Node2D" parent="."]
-position = Vector2( 5028, 1536 )
-scale = Vector2( 2.28, 48.28 )
-script = ExtResource( 5 )
-
-[node name="Area2D" type="Area2D" parent="Obstacle4"]
-collision_layer = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle4/Area2D"]
-position = Vector2( 8.375, -3.5 )
-shape = SubResource( 3 )
-
-[node name="TextureRect" type="TextureRect" parent="Obstacle4/Area2D/CollisionShape2D"]
-margin_left = -32.0
-margin_top = -32.0
-margin_right = 32.0
-margin_bottom = 32.0
-texture = ExtResource( 3 )
-
-[node name="Obstacle6" type="Node2D" parent="."]
-position = Vector2( 3375, 731 )
-scale = Vector2( -1.40234, 20.5269 )
-script = ExtResource( 5 )
-
-[node name="Area2D" type="Area2D" parent="Obstacle6"]
-collision_layer = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle6/Area2D"]
-position = Vector2( 8.375, -3.5 )
-shape = SubResource( 3 )
-
-[node name="TextureRect" type="TextureRect" parent="Obstacle6/Area2D/CollisionShape2D"]
-margin_left = -32.0
-margin_top = -32.0
-margin_right = 32.0
-margin_bottom = 32.0
-texture = ExtResource( 3 )
+[node name="Balls" parent="." instance=ExtResource( 4 )]
 
 [node name="Door" type="Node2D" parent="."]
-position = Vector2( 2389, 1209 )
-scale = Vector2( 1.6, 7.32001 )
-script = ExtResource( 5 )
+position = Vector2( 865, 1273 )
+scale = Vector2( 1.6, 9.08001 )
+script = ExtResource( 7 )
 
 [node name="Area2D" type="Area2D" parent="Door"]
+position = Vector2( -13.75, 8.60654 )
+scale = Vector2( 1.65, 1.43169 )
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door/Area2D"]
 position = Vector2( 8.375, -3.5 )
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="TextureRect" type="TextureRect" parent="Door/Area2D/CollisionShape2D"]
 visible = false
@@ -135,46 +44,27 @@ margin_left = -32.0
 margin_top = -32.0
 margin_right = 32.0
 margin_bottom = 32.0
-texture = ExtResource( 3 )
+texture = ExtResource( 9 )
 
 [node name="TextureRect2" type="TextureRect" parent="Door/Area2D/CollisionShape2D"]
-margin_left = -15.875
-margin_top = -25.4618
-margin_right = 24.125
-margin_bottom = 14.5382
-rect_scale = Vector2( 1.23469, 0.845069 )
+margin_left = -29.625
+margin_top = -28.877
+margin_right = 34.375
+margin_bottom = 35.123
+rect_scale = Vector2( 0.933688, 0.909551 )
 texture = ExtResource( 8 )
 
-[node name="Obstacle3" type="Node2D" parent="."]
-position = Vector2( 2068, 23 )
-scale = Vector2( 87.4, 1 )
-script = ExtResource( 5 )
-
-[node name="Area2D" type="Area2D" parent="Obstacle3"]
-collision_layer = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle3/Area2D"]
-position = Vector2( 8.375, -3.5 )
-shape = SubResource( 3 )
-
-[node name="TextureRect" type="TextureRect" parent="Obstacle3/Area2D/CollisionShape2D"]
-margin_left = -32.0
-margin_top = -32.0
-margin_right = 32.0
-margin_bottom = 32.0
-texture = ExtResource( 3 )
-
 [node name="endArea" type="Node2D" parent="."]
-position = Vector2( 1876, 1155 )
-scale = Vector2( 4.20241, 4.00216 )
-script = ExtResource( 4 )
+position = Vector2( 210, 1314 )
+scale = Vector2( 1.56391, 7.29774 )
+script = ExtResource( 5 )
 
 [node name="Area2D" type="Area2D" parent="endArea"]
 scale = Vector2( -20.5386, -19.9684 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="endArea/Area2D"]
 scale = Vector2( 0.50248, 0.2635 )
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="endArea/Area2D/CollisionShape2D"]
 margin_left = -10.3067
@@ -185,15 +75,15 @@ rect_scale = Vector2( 0.494728, 0.476001 )
 color = Color( 0, 1, 0, 0.266667 )
 
 [node name="Button" type="Node2D" parent="."]
-position = Vector2( 3674, 308 )
-scale = Vector2( 22.8885, 22.65 )
+position = Vector2( 2920, 1396 )
+scale = Vector2( 10.681, 32.5887 )
 script = ExtResource( 6 )
 door = NodePath("../Door")
 
 [node name="Area2D" type="Area2D" parent="Button"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Button/Area2D"]
-shape = SubResource( 5 )
+shape = SubResource( 3 )
 
 [node name="TextureRect" type="TextureRect" parent="Button/Area2D/CollisionShape2D"]
 margin_left = -10.1316
@@ -201,4 +91,1053 @@ margin_top = -9.96358
 margin_right = 53.8684
 margin_bottom = 54.0364
 rect_scale = Vector2( 0.314963, 0.311225 )
-texture = ExtResource( 7 )
+texture = ExtResource( 10 )
+
+[node name="ceiling" type="Node2D" parent="."]
+position = Vector2( -30, 4212 )
+
+[node name="Obstacle11" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 1019, -4240 )
+
+[node name="Obstacle12" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 957, -4242 )
+
+[node name="Obstacle13" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 894, -4243 )
+
+[node name="Obstacle14" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 836, -4242 )
+
+[node name="Obstacle26" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 103, -4245 )
+
+[node name="Obstacle27" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 45, -4244 )
+
+[node name="Obstacle15" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 774, -4244 )
+
+[node name="Obstacle16" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 711, -4245 )
+
+[node name="Obstacle17" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 647, -4242 )
+
+[node name="Obstacle18" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 585, -4244 )
+
+[node name="Obstacle19" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 522, -4245 )
+
+[node name="Obstacle20" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 457, -4246 )
+
+[node name="Obstacle21" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 395, -4248 )
+
+[node name="Obstacle22" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 332, -4249 )
+
+[node name="Obstacle23" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 268, -4246 )
+
+[node name="Obstacle24" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 206, -4248 )
+
+[node name="Obstacle25" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 143, -4249 )
+
+[node name="Obstacle28" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 2053, -4236 )
+
+[node name="Obstacle29" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 1991, -4238 )
+
+[node name="Obstacle30" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 1928, -4239 )
+
+[node name="Obstacle31" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 1870, -4238 )
+
+[node name="Obstacle32" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 1137, -4241 )
+
+[node name="Obstacle33" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 1079, -4240 )
+
+[node name="Obstacle34" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 1808, -4240 )
+
+[node name="Obstacle35" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 1745, -4241 )
+
+[node name="Obstacle36" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 1681, -4238 )
+
+[node name="Obstacle37" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 1619, -4240 )
+
+[node name="Obstacle38" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 1556, -4241 )
+
+[node name="Obstacle39" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 1491, -4242 )
+
+[node name="Obstacle40" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 1429, -4244 )
+
+[node name="Obstacle41" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 1366, -4245 )
+
+[node name="Obstacle42" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 1302, -4242 )
+
+[node name="Obstacle43" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 1240, -4244 )
+
+[node name="Obstacle44" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 1177, -4245 )
+
+[node name="Obstacle62" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 4096, -4240 )
+
+[node name="Obstacle63" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 4034, -4242 )
+
+[node name="Obstacle64" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 3971, -4243 )
+
+[node name="Obstacle65" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 3913, -4242 )
+
+[node name="Obstacle66" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 3180, -4245 )
+
+[node name="Obstacle67" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 3122, -4244 )
+
+[node name="Obstacle68" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 3851, -4244 )
+
+[node name="Obstacle69" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 3788, -4245 )
+
+[node name="Obstacle70" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 3724, -4242 )
+
+[node name="Obstacle71" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 3662, -4244 )
+
+[node name="Obstacle72" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 3599, -4245 )
+
+[node name="Obstacle73" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 3534, -4246 )
+
+[node name="Obstacle74" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 3472, -4248 )
+
+[node name="Obstacle75" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 3409, -4249 )
+
+[node name="Obstacle76" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 3345, -4246 )
+
+[node name="Obstacle77" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 3283, -4248 )
+
+[node name="Obstacle78" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 3220, -4249 )
+
+[node name="Obstacle79" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 5130, -4236 )
+
+[node name="Obstacle80" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 5068, -4238 )
+
+[node name="Obstacle81" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 5005, -4239 )
+
+[node name="Obstacle82" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 4947, -4238 )
+
+[node name="Obstacle83" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 4214, -4241 )
+
+[node name="Obstacle84" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 4156, -4240 )
+
+[node name="Obstacle85" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 4885, -4240 )
+
+[node name="Obstacle86" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 4822, -4241 )
+
+[node name="Obstacle87" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 4758, -4238 )
+
+[node name="Obstacle88" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 4696, -4240 )
+
+[node name="Obstacle89" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 4633, -4241 )
+
+[node name="Obstacle90" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 4568, -4242 )
+
+[node name="Obstacle91" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 4506, -4244 )
+
+[node name="Obstacle92" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 4443, -4245 )
+
+[node name="Obstacle93" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 4379, -4242 )
+
+[node name="Obstacle94" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 4317, -4244 )
+
+[node name="Obstacle95" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 4254, -4245 )
+
+[node name="Obstacle45" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 3076, -4236 )
+
+[node name="Obstacle46" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 3014, -4238 )
+
+[node name="Obstacle47" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 2951, -4239 )
+
+[node name="Obstacle48" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 2893, -4238 )
+
+[node name="Obstacle49" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 2160, -4241 )
+
+[node name="Obstacle50" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 2102, -4240 )
+
+[node name="Obstacle51" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 2831, -4240 )
+
+[node name="Obstacle52" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 2768, -4241 )
+
+[node name="Obstacle53" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 2704, -4238 )
+
+[node name="Obstacle54" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 2642, -4240 )
+
+[node name="Obstacle55" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 2579, -4241 )
+
+[node name="Obstacle56" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 2514, -4242 )
+
+[node name="Obstacle57" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 2452, -4244 )
+
+[node name="Obstacle58" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 2389, -4245 )
+
+[node name="Obstacle59" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 2325, -4242 )
+
+[node name="Obstacle60" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 2263, -4244 )
+
+[node name="Obstacle61" parent="ceiling" instance=ExtResource( 3 )]
+position = Vector2( 2200, -4245 )
+
+[node name="floor" type="Node2D" parent="."]
+position = Vector2( 5, 5950 )
+
+[node name="Obstacle11" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 1019, -4240 )
+
+[node name="Obstacle12" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 957, -4242 )
+
+[node name="Obstacle13" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 894, -4243 )
+
+[node name="Obstacle14" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 836, -4242 )
+
+[node name="Obstacle26" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 103, -4245 )
+
+[node name="Obstacle27" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 45, -4244 )
+
+[node name="Obstacle15" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 774, -4244 )
+
+[node name="Obstacle16" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 711, -4245 )
+
+[node name="Obstacle17" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 647, -4242 )
+
+[node name="Obstacle18" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 585, -4244 )
+
+[node name="Obstacle19" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 522, -4245 )
+
+[node name="Obstacle20" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 457, -4246 )
+
+[node name="Obstacle21" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 395, -4248 )
+
+[node name="Obstacle22" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 332, -4249 )
+
+[node name="Obstacle23" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 268, -4246 )
+
+[node name="Obstacle24" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 206, -4248 )
+
+[node name="Obstacle25" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 143, -4249 )
+
+[node name="Obstacle28" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 2053, -4236 )
+
+[node name="Obstacle29" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 1991, -4238 )
+
+[node name="Obstacle30" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 1928, -4239 )
+
+[node name="Obstacle31" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 1870, -4238 )
+
+[node name="Obstacle32" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 1137, -4241 )
+
+[node name="Obstacle33" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 1079, -4240 )
+
+[node name="Obstacle34" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 1808, -4240 )
+
+[node name="Obstacle35" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 1745, -4241 )
+
+[node name="Obstacle36" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 1681, -4238 )
+
+[node name="Obstacle37" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 1619, -4240 )
+
+[node name="Obstacle38" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 1556, -4241 )
+
+[node name="Obstacle39" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 1491, -4242 )
+
+[node name="Obstacle40" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 1429, -4244 )
+
+[node name="Obstacle41" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 1366, -4245 )
+
+[node name="Obstacle42" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 1302, -4242 )
+
+[node name="Obstacle43" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 1240, -4244 )
+
+[node name="Obstacle44" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 1177, -4245 )
+
+[node name="Obstacle62" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 4096, -4240 )
+
+[node name="Obstacle63" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 4034, -4242 )
+
+[node name="Obstacle64" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 3971, -4243 )
+
+[node name="Obstacle65" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 3913, -4242 )
+
+[node name="Obstacle66" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 3180, -4245 )
+
+[node name="Obstacle67" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 3122, -4244 )
+
+[node name="Obstacle68" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 3851, -4244 )
+
+[node name="Obstacle69" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 3788, -4245 )
+
+[node name="Obstacle70" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 3724, -4242 )
+
+[node name="Obstacle71" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 3662, -4244 )
+
+[node name="Obstacle72" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 3599, -4245 )
+
+[node name="Obstacle73" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 3534, -4246 )
+
+[node name="Obstacle74" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 3472, -4248 )
+
+[node name="Obstacle75" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 3409, -4249 )
+
+[node name="Obstacle76" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 3345, -4246 )
+
+[node name="Obstacle77" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 3283, -4248 )
+
+[node name="Obstacle78" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 3220, -4249 )
+
+[node name="Obstacle79" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 5130, -4236 )
+
+[node name="Obstacle80" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 5068, -4238 )
+
+[node name="Obstacle81" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 5005, -4239 )
+
+[node name="Obstacle82" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 4947, -4238 )
+
+[node name="Obstacle83" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 4214, -4241 )
+
+[node name="Obstacle84" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 4156, -4240 )
+
+[node name="Obstacle85" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 4885, -4240 )
+
+[node name="Obstacle86" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 4822, -4241 )
+
+[node name="Obstacle87" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 4758, -4238 )
+
+[node name="Obstacle88" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 4696, -4240 )
+
+[node name="Obstacle89" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 4633, -4241 )
+
+[node name="Obstacle90" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 4568, -4242 )
+
+[node name="Obstacle91" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 4506, -4244 )
+
+[node name="Obstacle92" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 4443, -4245 )
+
+[node name="Obstacle93" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 4379, -4242 )
+
+[node name="Obstacle94" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 4317, -4244 )
+
+[node name="Obstacle95" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 4254, -4245 )
+
+[node name="Obstacle45" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 3076, -4236 )
+
+[node name="Obstacle46" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 3014, -4238 )
+
+[node name="Obstacle47" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 2951, -4239 )
+
+[node name="Obstacle48" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 2893, -4238 )
+
+[node name="Obstacle49" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 2160, -4241 )
+
+[node name="Obstacle50" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 2102, -4240 )
+
+[node name="Obstacle51" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 2831, -4240 )
+
+[node name="Obstacle52" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 2768, -4241 )
+
+[node name="Obstacle53" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 2704, -4238 )
+
+[node name="Obstacle54" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 2642, -4240 )
+
+[node name="Obstacle55" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 2579, -4241 )
+
+[node name="Obstacle56" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 2514, -4242 )
+
+[node name="Obstacle57" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 2452, -4244 )
+
+[node name="Obstacle58" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 2389, -4245 )
+
+[node name="Obstacle59" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 2325, -4242 )
+
+[node name="Obstacle60" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 2263, -4244 )
+
+[node name="Obstacle61" parent="floor" instance=ExtResource( 3 )]
+position = Vector2( 2200, -4245 )
+
+[node name="right wall" type="Node2D" parent="."]
+position = Vector2( 3045, 756 )
+rotation = 1.56583
+
+[node name="Obstacle11" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( -489.945, -6.69531 )
+
+[node name="Obstacle12" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( -551.945, -8.69531 )
+
+[node name="Obstacle13" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( -614.945, -9.69531 )
+
+[node name="Obstacle14" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( -672.945, -8.69531 )
+
+[node name="Obstacle26" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( -1405.95, -11.6953 )
+
+[node name="Obstacle27" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( -1463.95, -10.6953 )
+
+[node name="Obstacle15" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( -734.945, -10.6953 )
+
+[node name="Obstacle16" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( -797.945, -11.6953 )
+
+[node name="Obstacle17" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( -861.945, -8.69531 )
+
+[node name="Obstacle18" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( -923.945, -10.6953 )
+
+[node name="Obstacle19" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( -986.945, -11.6953 )
+
+[node name="Obstacle20" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( -1051.95, -12.6953 )
+
+[node name="Obstacle21" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( -1113.95, -14.6953 )
+
+[node name="Obstacle22" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( -1176.95, -15.6953 )
+
+[node name="Obstacle23" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( -1240.95, -12.6953 )
+
+[node name="Obstacle24" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( -1302.95, -14.6953 )
+
+[node name="Obstacle25" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( -1365.95, -15.6953 )
+
+[node name="Obstacle28" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( 544.055, -2.69531 )
+
+[node name="Obstacle29" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( 482.055, -4.69531 )
+
+[node name="Obstacle30" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( 419.055, -5.69531 )
+
+[node name="Obstacle31" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( 361.055, -4.69531 )
+
+[node name="Obstacle32" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( -371.945, -7.69531 )
+
+[node name="Obstacle33" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( -429.945, -6.69531 )
+
+[node name="Obstacle34" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( 299.055, -6.69531 )
+
+[node name="Obstacle35" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( 236.055, -7.69531 )
+
+[node name="Obstacle36" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( 172.055, -4.69531 )
+
+[node name="Obstacle37" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( 110.055, -6.69531 )
+
+[node name="Obstacle38" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( 47.0548, -7.69531 )
+
+[node name="Obstacle39" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( -17.9452, -8.69531 )
+
+[node name="Obstacle40" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( -79.9452, -10.6953 )
+
+[node name="Obstacle41" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( -142.945, -11.6953 )
+
+[node name="Obstacle42" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( -206.945, -8.69531 )
+
+[node name="Obstacle43" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( -268.945, -10.6953 )
+
+[node name="Obstacle44" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( -331.945, -11.6953 )
+
+[node name="Obstacle45" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( 1567.05, -2.69531 )
+
+[node name="Obstacle46" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( 1505.05, -4.69531 )
+
+[node name="Obstacle47" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( 1442.05, -5.69531 )
+
+[node name="Obstacle48" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( 1384.05, -4.69531 )
+
+[node name="Obstacle49" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( 651.055, -7.69531 )
+
+[node name="Obstacle50" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( 593.055, -6.69531 )
+
+[node name="Obstacle51" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( 1322.05, -6.69531 )
+
+[node name="Obstacle52" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( 1259.05, -7.69531 )
+
+[node name="Obstacle53" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( 1195.05, -4.69531 )
+
+[node name="Obstacle54" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( 1133.05, -6.69531 )
+
+[node name="Obstacle55" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( 1070.05, -7.69531 )
+
+[node name="Obstacle56" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( 1005.05, -8.69531 )
+
+[node name="Obstacle57" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( 943.055, -10.6953 )
+
+[node name="Obstacle58" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( 880.055, -11.6953 )
+
+[node name="Obstacle59" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( 816.055, -8.69531 )
+
+[node name="Obstacle60" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( 754.055, -10.6953 )
+
+[node name="Obstacle61" parent="right wall" instance=ExtResource( 3 )]
+position = Vector2( 691.055, -11.6953 )
+
+[node name="right wall2" type="Node2D" parent="."]
+position = Vector2( -549, 903 )
+rotation = 3.13681
+
+[node name="Obstacle11" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( -489.945, -6.69531 )
+
+[node name="Obstacle12" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( -551.945, -8.69531 )
+
+[node name="Obstacle13" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( -614.945, -9.69531 )
+
+[node name="Obstacle14" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( -672.945, -8.69531 )
+
+[node name="Obstacle26" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( -1405.95, -11.6953 )
+
+[node name="Obstacle27" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( -1463.95, -10.6953 )
+
+[node name="Obstacle15" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( -734.945, -10.6953 )
+
+[node name="Obstacle16" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( -797.945, -11.6953 )
+
+[node name="Obstacle17" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( -861.945, -8.69531 )
+
+[node name="Obstacle18" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( -923.945, -10.6953 )
+
+[node name="Obstacle19" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( -986.945, -11.6953 )
+
+[node name="Obstacle20" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( -1051.95, -12.6953 )
+
+[node name="Obstacle21" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( -1113.95, -14.6953 )
+
+[node name="Obstacle22" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( -1176.95, -15.6953 )
+
+[node name="Obstacle23" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( -1240.95, -12.6953 )
+
+[node name="Obstacle24" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( -1302.95, -14.6953 )
+
+[node name="Obstacle25" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( -1365.95, -15.6953 )
+
+[node name="Obstacle28" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( 544.055, -2.69531 )
+
+[node name="Obstacle29" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( 482.055, -4.69531 )
+
+[node name="Obstacle30" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( 419.055, -5.69531 )
+
+[node name="Obstacle31" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( 361.055, -4.69531 )
+
+[node name="Obstacle32" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( -371.945, -7.69531 )
+
+[node name="Obstacle33" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( -429.945, -6.69531 )
+
+[node name="Obstacle34" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( 299.055, -6.69531 )
+
+[node name="Obstacle35" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( 236.055, -7.69531 )
+
+[node name="Obstacle36" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( 172.055, -4.69531 )
+
+[node name="Obstacle37" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( 110.055, -6.69531 )
+
+[node name="Obstacle38" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( 47.0548, -7.69531 )
+
+[node name="Obstacle39" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( -17.9452, -8.69531 )
+
+[node name="Obstacle40" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( -79.9452, -10.6953 )
+
+[node name="Obstacle41" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( -142.945, -11.6953 )
+
+[node name="Obstacle42" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( -206.945, -8.69531 )
+
+[node name="Obstacle43" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( -268.945, -10.6953 )
+
+[node name="Obstacle44" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( -331.945, -11.6953 )
+
+[node name="Obstacle45" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( 1567.05, -2.69531 )
+
+[node name="Obstacle46" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( 1505.05, -4.69531 )
+
+[node name="Obstacle47" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( 1442.05, -5.69531 )
+
+[node name="Obstacle48" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( 1384.05, -4.69531 )
+
+[node name="Obstacle49" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( 651.055, -7.69531 )
+
+[node name="Obstacle50" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( 593.055, -6.69531 )
+
+[node name="Obstacle51" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( 1322.05, -6.69531 )
+
+[node name="Obstacle52" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( 1259.05, -7.69531 )
+
+[node name="Obstacle53" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( 1195.05, -4.69531 )
+
+[node name="Obstacle54" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( 1133.05, -6.69531 )
+
+[node name="Obstacle55" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( 1070.05, -7.69531 )
+
+[node name="Obstacle56" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( 1005.05, -8.69531 )
+
+[node name="Obstacle57" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( 943.055, -10.6953 )
+
+[node name="Obstacle58" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( 880.055, -11.6953 )
+
+[node name="Obstacle59" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( 816.055, -8.69531 )
+
+[node name="Obstacle60" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( 754.055, -10.6953 )
+
+[node name="Obstacle61" parent="right wall2" instance=ExtResource( 3 )]
+position = Vector2( 691.055, -11.6953 )
+
+[node name="left wall" type="Node2D" parent="."]
+position = Vector2( 27.0002, 879 )
+rotation = 1.56583
+
+[node name="Obstacle11" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( -489.945, -6.69531 )
+
+[node name="Obstacle12" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( -551.945, -8.69531 )
+
+[node name="Obstacle13" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( -614.945, -9.69531 )
+
+[node name="Obstacle14" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( -672.945, -8.69531 )
+
+[node name="Obstacle26" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( -1405.95, -11.6953 )
+
+[node name="Obstacle27" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( -1463.95, -10.6953 )
+
+[node name="Obstacle15" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( -734.945, -10.6953 )
+
+[node name="Obstacle16" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( -797.945, -11.6953 )
+
+[node name="Obstacle17" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( -861.945, -8.69531 )
+
+[node name="Obstacle18" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( -923.945, -10.6953 )
+
+[node name="Obstacle19" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( -986.945, -11.6953 )
+
+[node name="Obstacle20" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( -1051.95, -12.6953 )
+
+[node name="Obstacle21" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( -1113.95, -14.6953 )
+
+[node name="Obstacle22" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( -1176.95, -15.6953 )
+
+[node name="Obstacle23" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( -1240.95, -12.6953 )
+
+[node name="Obstacle24" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( -1302.95, -14.6953 )
+
+[node name="Obstacle25" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( -1365.95, -15.6953 )
+
+[node name="Obstacle28" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( 544.055, -2.69531 )
+
+[node name="Obstacle29" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( 482.055, -4.69531 )
+
+[node name="Obstacle30" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( 419.055, -5.69531 )
+
+[node name="Obstacle31" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( 361.055, -4.69531 )
+
+[node name="Obstacle32" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( -371.945, -7.69531 )
+
+[node name="Obstacle33" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( -429.945, -6.69531 )
+
+[node name="Obstacle34" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( 299.055, -6.69531 )
+
+[node name="Obstacle35" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( 236.055, -7.69531 )
+
+[node name="Obstacle36" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( 172.055, -4.69531 )
+
+[node name="Obstacle37" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( 110.055, -6.69531 )
+
+[node name="Obstacle38" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( 47.0548, -7.69531 )
+
+[node name="Obstacle39" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( -17.9452, -8.69531 )
+
+[node name="Obstacle40" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( -79.9452, -10.6953 )
+
+[node name="Obstacle41" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( -142.945, -11.6953 )
+
+[node name="Obstacle42" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( -206.945, -8.69531 )
+
+[node name="Obstacle43" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( -268.945, -10.6953 )
+
+[node name="Obstacle44" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( -331.945, -11.6953 )
+
+[node name="Obstacle45" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( 1567.05, -2.69531 )
+
+[node name="Obstacle46" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( 1505.05, -4.69531 )
+
+[node name="Obstacle47" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( 1442.05, -5.69531 )
+
+[node name="Obstacle48" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( 1384.05, -4.69531 )
+
+[node name="Obstacle49" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( 651.055, -7.69531 )
+
+[node name="Obstacle50" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( 593.055, -6.69531 )
+
+[node name="Obstacle51" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( 1322.05, -6.69531 )
+
+[node name="Obstacle52" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( 1259.05, -7.69531 )
+
+[node name="Obstacle53" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( 1195.05, -4.69531 )
+
+[node name="Obstacle54" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( 1133.05, -6.69531 )
+
+[node name="Obstacle55" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( 1070.05, -7.69531 )
+
+[node name="Obstacle56" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( 1005.05, -8.69531 )
+
+[node name="Obstacle57" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( 943.055, -10.6953 )
+
+[node name="Obstacle58" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( 880.055, -11.6953 )
+
+[node name="Obstacle59" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( 816.055, -8.69531 )
+
+[node name="Obstacle60" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( 754.055, -10.6953 )
+
+[node name="Obstacle61" parent="left wall" instance=ExtResource( 3 )]
+position = Vector2( 691.055, -11.6953 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 1593, 845 )
+current = true
+zoom = Vector2( 3, 3 )
+limit_left = 31
+limit_top = -56
+limit_right = 3068
+limit_bottom = 1732
+editor_draw_limits = true
+
+[node name="middle wall1" type="Node2D" parent="."]
+position = Vector2( 2484, 1439 )
+rotation = 1.55668
+
+[node name="Deadly17" parent="middle wall1" instance=ExtResource( 2 )]
+position = Vector2( -408.645, -11.0508 )
+
+[node name="Deadly18" parent="middle wall1" instance=ExtResource( 2 )]
+position = Vector2( -349.119, -14.3132 )
+
+[node name="Deadly19" parent="middle wall1" instance=ExtResource( 2 )]
+position = Vector2( -286.079, -12.6108 )
+
+[node name="Deadly20" parent="middle wall1" instance=ExtResource( 2 )]
+position = Vector2( -223.938, -10.4727 )
+
+[node name="Deadly21" parent="middle wall1" instance=ExtResource( 2 )]
+position = Vector2( -163.134, -8.79883 )
+
+[node name="Deadly22" parent="middle wall1" instance=ExtResource( 2 )]
+position = Vector2( -99.1934, -7.53223 )
+
+[node name="Deadly23" parent="middle wall1" instance=ExtResource( 2 )]
+position = Vector2( -46.8965, -5.073 )
+
+[node name="Deadly24" parent="middle wall1" instance=ExtResource( 2 )]
+position = Vector2( -473.514, -9.64648 )
+
+[node name="Deadly25" parent="middle wall1" instance=ExtResource( 2 )]
+position = Vector2( -874.088, -22.3831 )
+
+[node name="Deadly26" parent="middle wall1" instance=ExtResource( 2 )]
+position = Vector2( -814.562, -25.6455 )
+
+[node name="Deadly27" parent="middle wall1" instance=ExtResource( 2 )]
+position = Vector2( -751.521, -23.9431 )
+
+[node name="Deadly28" parent="middle wall1" instance=ExtResource( 2 )]
+position = Vector2( -689.381, -21.8049 )
+
+[node name="Deadly29" parent="middle wall1" instance=ExtResource( 2 )]
+position = Vector2( -628.576, -20.1311 )
+
+[node name="Deadly30" parent="middle wall1" instance=ExtResource( 2 )]
+position = Vector2( -564.636, -18.8645 )
+
+[node name="Deadly31" parent="middle wall1" instance=ExtResource( 2 )]
+position = Vector2( -512.339, -16.4053 )
+
+[node name="Deadly32" parent="middle wall1" instance=ExtResource( 2 )]
+position = Vector2( -938.957, -20.9788 )

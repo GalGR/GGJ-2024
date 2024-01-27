@@ -13,7 +13,7 @@ position = Vector2( 1, 0 )
 
 [node name="endArea" type="Node2D" parent="."]
 position = Vector2( 1119, 3938 )
-scale = Vector2( 11.1498, 10.1382 )
+scale = Vector2( 12.4721, 10.1382 )
 script = ExtResource( 6 )
 
 [node name="Area2D" type="Area2D" parent="endArea"]
@@ -34,11 +34,11 @@ color = Color( 0, 1, 0, 0.266667 )
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 1231, 536 )
 current = true
-zoom = Vector2( 2.4, 2.4 )
-limit_left = 0
-limit_top = 0
-limit_right = 2447
-limit_bottom = 4100
+zoom = Vector2( 2.45, 2.45 )
+limit_left = -66
+limit_top = -104
+limit_right = 2453
+limit_bottom = 4531
 editor_draw_screen = false
 editor_draw_limits = true
 
