@@ -10,7 +10,7 @@
 [node name="Balls" parent="." instance=ExtResource( 1 )]
 
 [node name="endArea" parent="." instance=ExtResource( 2 )]
-position = Vector2( 491, 277 )
+position = Vector2( 721, 1003 )
 scale = Vector2( 1.62178, 2.47435 )
 
 [node name="Obstacle" parent="." instance=ExtResource( 4 )]
@@ -220,6 +220,15 @@ Deadly = false
 [node name="Obstacle37" parent="." instance=ExtResource( 4 )]
 position = Vector2( 19, 584 )
 Deadly = false
+
+[node name="Obstacle2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 583, 456 )
+
+[node name="Obstacle3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 869, 565 )
+
+[node name="Obstacle4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 663, 733 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
