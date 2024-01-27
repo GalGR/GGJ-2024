@@ -23,8 +23,11 @@ func _ready():
 	thread.add_point(ballNode1.global_position)
 	thread.add_point(ballNode2.global_position)
 	if camera:
+		print ("got camera")
 		camera.reset_smoothing();
 		camera.position = anchoredBall.position
+	else:
+		print ("did not get camera")
 	
 	Globals.connect("game_started", self, "switch_balls")
 
