@@ -15,7 +15,7 @@ extents = Vector2( 28.375, 29.5 )
 position = Vector2( 14, 208 )
 
 [node name="Obstacle" type="Node2D" parent="."]
-position = Vector2( 4075, -3221 )
+position = Vector2( -55, -1176 )
 scale = Vector2( 2.28, 82.08 )
 script = ExtResource( 2 )
 
@@ -34,7 +34,7 @@ margin_bottom = 32.0
 texture = ExtResource( 7 )
 
 [node name="Obstacle4" type="Node2D" parent="."]
-position = Vector2( 9275, -3545 )
+position = Vector2( 2372, -1338 )
 scale = Vector2( 2.28, 75.28 )
 script = ExtResource( 2 )
 
@@ -53,8 +53,8 @@ margin_bottom = 32.0
 texture = ExtResource( 7 )
 
 [node name="Obstacle2" type="Node2D" parent="."]
-position = Vector2( 5095, -530 )
-scale = Vector2( 81.04, 1 )
+position = Vector2( 789, 587 )
+scale = Vector2( 54.16, 1 )
 script = ExtResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="Obstacle2"]
@@ -72,8 +72,8 @@ margin_bottom = 32.0
 texture = ExtResource( 7 )
 
 [node name="Obstacle3" type="Node2D" parent="."]
-position = Vector2( 8157, -3225 )
-scale = Vector2( 26.8192, -0.482782 )
+position = Vector2( 1059, -3988 )
+scale = Vector2( 53.04, 1 )
 script = ExtResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="Obstacle3"]
@@ -90,99 +90,40 @@ margin_right = 32.0
 margin_bottom = 32.0
 texture = ExtResource( 7 )
 
-[node name="Obstacle5" type="Node2D" parent="."]
-position = Vector2( 4660, -3212 )
-scale = Vector2( 23.5392, -0.482782 )
+[node name="Obstacle6" type="Node2D" parent="."]
+position = Vector2( 520, -2271 )
+rotation = 0.457276
+scale = Vector2( 26.0104, 1 )
 script = ExtResource( 2 )
 
-[node name="Area2D" type="Area2D" parent="Obstacle5"]
+[node name="Area2D" type="Area2D" parent="Obstacle6"]
 collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle5/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle6/Area2D"]
 position = Vector2( 8.375, -3.5 )
 shape = SubResource( 3 )
 
-[node name="TextureRect" type="TextureRect" parent="Obstacle5/Area2D/CollisionShape2D"]
+[node name="TextureRect" type="TextureRect" parent="Obstacle6/Area2D/CollisionShape2D"]
 margin_left = -32.0
 margin_top = -32.0
 margin_right = 32.0
 margin_bottom = 32.0
 texture = ExtResource( 7 )
 
-[node name="Obstacle8" type="Node2D" parent="."]
-position = Vector2( 7933, -2400 )
-rotation = 0.785398
+[node name="Obstacle7" type="Node2D" parent="."]
+position = Vector2( 950, -2468 )
+rotation = 0.457469
 scale = Vector2( 30.0962, 1 )
 script = ExtResource( 2 )
 
-[node name="Area2D" type="Area2D" parent="Obstacle8"]
+[node name="Area2D" type="Area2D" parent="Obstacle7"]
 collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle8/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle7/Area2D"]
 position = Vector2( 8.375, -3.5 )
 shape = SubResource( 3 )
 
-[node name="TextureRect" type="TextureRect" parent="Obstacle8/Area2D/CollisionShape2D"]
-margin_left = -32.0
-margin_top = -32.0
-margin_right = 32.0
-margin_bottom = 32.0
-texture = ExtResource( 7 )
-
-[node name="Obstacle9" type="Node2D" parent="."]
-position = Vector2( 7113, -1996 )
-rotation = 1.21824
-scale = Vector2( 30.0962, 1 )
-script = ExtResource( 2 )
-
-[node name="Area2D" type="Area2D" parent="Obstacle9"]
-collision_layer = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle9/Area2D"]
-position = Vector2( 8.375, -3.5 )
-shape = SubResource( 3 )
-
-[node name="TextureRect" type="TextureRect" parent="Obstacle9/Area2D/CollisionShape2D"]
-margin_left = -32.0
-margin_top = -32.0
-margin_right = 32.0
-margin_bottom = 32.0
-texture = ExtResource( 7 )
-
-[node name="Obstacle10" type="Node2D" parent="."]
-position = Vector2( 6185, -1875 )
-rotation = 1.72788
-scale = Vector2( 30.0962, 1 )
-script = ExtResource( 2 )
-
-[node name="Area2D" type="Area2D" parent="Obstacle10"]
-collision_layer = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle10/Area2D"]
-position = Vector2( 8.375, -3.5 )
-shape = SubResource( 3 )
-
-[node name="TextureRect" type="TextureRect" parent="Obstacle10/Area2D/CollisionShape2D"]
-margin_left = -32.0
-margin_top = -32.0
-margin_right = 32.0
-margin_bottom = 32.0
-texture = ExtResource( 7 )
-
-[node name="Obstacle11" type="Node2D" parent="."]
-position = Vector2( 5324, -2238 )
-rotation = 2.22529
-scale = Vector2( 30.0962, 1 )
-script = ExtResource( 2 )
-
-[node name="Area2D" type="Area2D" parent="Obstacle11"]
-collision_layer = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle11/Area2D"]
-position = Vector2( 8.375, -3.5 )
-shape = SubResource( 3 )
-
-[node name="TextureRect" type="TextureRect" parent="Obstacle11/Area2D/CollisionShape2D"]
+[node name="TextureRect" type="TextureRect" parent="Obstacle7/Area2D/CollisionShape2D"]
 margin_left = -32.0
 margin_top = -32.0
 margin_right = 32.0
@@ -190,7 +131,7 @@ margin_bottom = 32.0
 texture = ExtResource( 7 )
 
 [node name="endArea" type="Node2D" parent="."]
-position = Vector2( 9587, -816 )
+position = Vector2( 1164, 32 )
 scale = Vector2( 11.1498, 10.1382 )
 script = ExtResource( 6 )
 
@@ -226,7 +167,7 @@ polygon = PoolVector2Array( 23.9362, 89.7606, 24.0691, 58.2447, 9.30851, 58.3777
 uv = PoolVector2Array( 23.9362, 89.7606, 24.0691, 58.2447, 7.31383, 58.2447, 31.9149, 36.7021, 50.6649, 57.7128, 35.3723, 57.9787, 33.7766, 89.8936 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 4778, -5807 )
+position = Vector2( -134, -4034 )
 current = true
 zoom = Vector2( 2.4, 2.4 )
 limit_left = 0
@@ -237,6 +178,6 @@ editor_draw_screen = false
 editor_draw_limits = true
 
 [node name="Balls" parent="." instance=ExtResource( 1 )]
-position = Vector2( 6555, -5065 )
+position = Vector2( 917, -3719 )
 
 [node name="Background" parent="." instance=ExtResource( 3 )]
