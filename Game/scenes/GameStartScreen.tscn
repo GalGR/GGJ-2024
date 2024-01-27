@@ -1,16 +1,14 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scripts/LevelWonScene.gd" type="Script" id=1]
-[ext_resource path="res://fonts/Roboto/Roboto-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scripts/GameStartScreen.gd" type="Script" id=1]
 
-[sub_resource type="DynamicFont" id=5]
-size = 65
-font_data = ExtResource( 2 )
+[sub_resource type="DynamicFont" id=1]
+size = 66
 
 [sub_resource type="Animation" id=2]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Control/ColorRect:color")
+tracks/0/path = NodePath("Control/Black:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -22,7 +20,7 @@ tracks/0/keys = {
 "values": [ Color( 0, 0, 0, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Control/Label2:custom_colors/font_color")
+tracks/1/path = NodePath("Control/Label:custom_colors/font_color")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -31,13 +29,13 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
+"values": [ Color( 0, 0, 0, 1 ) ]
 }
 
 [sub_resource type="Animation" id=3]
 resource_name = "fade"
 tracks/0/type = "value"
-tracks/0/path = NodePath("Control/ColorRect:color")
+tracks/0/path = NodePath("Control/Label:custom_colors/font_color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -46,33 +44,46 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0.741176 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
-
-[sub_resource type="Animation" id=4]
-resource_name = "fadeOut"
-tracks/0/type = "value"
-tracks/0/path = NodePath("Control/ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 0, 0, 0, 0.741176 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control/Black:color")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
-"values": [  ]
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0.741176 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "fadeOut"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/Black:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0.741176 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control/Label:custom_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/2/type = "method"
 tracks/2/path = NodePath(".")
@@ -81,27 +92,15 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0.5, 1 ),
+"times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "values": [ {
 "args": [  ],
-"method": "fade_out_blacked"
+"method": "fade_out_started"
 }, {
 "args": [  ],
 "method": "fade_out_ended"
 } ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Control/Label2:custom_colors/font_color")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
 [node name="CanvasLayer" type="CanvasLayer"]
@@ -111,26 +110,34 @@ script = ExtResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="ColorRect" type="ColorRect" parent="Control"]
+[node name="Black" type="ColorRect" parent="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 0 )
 
-[node name="Label2" type="Label" parent="Control"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -370.5
-margin_top = -78.5
-margin_right = 370.5
-margin_bottom = 78.5
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_fonts/font = SubResource( 5 )
-text = "Level Complete!
-You made the balls happy"
-align = 1
-valign = 1
+margin_right = 100.0
+margin_bottom = 100.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Game Over
+"
+
+[node name="Label" type="Label" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -83.0
+margin_top = -40.0
+margin_right = 43.0
+margin_bottom = -26.0
+rect_scale = Vector2( 1.70515, 2.47826 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Press Space to start"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 2 )
