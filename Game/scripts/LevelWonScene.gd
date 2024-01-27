@@ -10,6 +10,5 @@ func _process(delta):
 			$AnimationPlayer.play("fadeOut")
 
 func fade_out_ended():
-	get_tree().get_root().remove_child(self)
-	Globals.set_play_state(true)
+	get_parent().remove_child(self)
 	Globals.emit_signal("level_won_scene_finished")

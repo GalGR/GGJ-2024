@@ -7,6 +7,8 @@ signal level_won_scene_finished
 
 var play_scene_running : bool = true
 
+var currentLevelNum : int = 1
+
 func _ready():
 	pass # Replace with function body.
 

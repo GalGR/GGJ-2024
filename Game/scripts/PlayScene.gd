@@ -24,12 +24,14 @@ func on_player_win():
 		add_child(gameWonScreen)
 		added_game_win_screen = true
 		Globals.play_scene_running = false
-	#load game won scene
-			
 		
 func on_game_over_finished():
 	get_tree().reload_current_scene()
+	added_game_over_screen = false
 
 func on_new_level():
-	print ("win finished")
-	get_tree().reload_current_scene()
+	Globals.currentLevelNum+=1
+	added_game_win_screen = false
+	get_tree().change_scene("res://scenes/Level" + str(Globals.currentLevelNum) + ".tscn")
+	print("res://scenes/Level" + str(Globals.currentLevelNum) + ".tscn")
+	Globals.play_scene_running = true

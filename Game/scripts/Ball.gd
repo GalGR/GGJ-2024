@@ -20,7 +20,6 @@ var isIn = false;
 
 func _ready()->void:
 	start_position = global_position
-	Globals.connect("level_won_scene_finished", self, "markOut")
 
 func init_anchor(pivot_node:Node2D):
 	start_position = global_position
@@ -44,7 +43,6 @@ func markIn():
 	setIn(true)
 	
 func markOut():
-	print ("ball got out")
 	setIn(false)
 	
 func isIn():
