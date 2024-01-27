@@ -11,7 +11,7 @@ extents = Vector2( 28.375, 29.5 )
 
 [sub_resource type="RectangleShape2D" id=4]
 
-[node name="Node2D" type="Node2D"]
+[node name="LevelRoot" type="Node2D"]
 
 [node name="Obstacle" type="Node2D" parent="."]
 position = Vector2( -55, -1176 )

@@ -26,6 +26,7 @@ func _ready():
 		camera.reset_smoothing();
 		camera.position = anchoredBall.position
 	
+	Globals.connect("game_started", self, "switch_balls")
 
 func _process(delta):
 	if Globals.play_scene_running:
@@ -42,7 +43,7 @@ func game_input()->void:
 		
 func switch_balls()->void:
 	if (activeBall.isIn() and anchoredBall.isIn()):
-		Globals.emit_signal("game_won")
+		Globals.emit_signal("level_won")
 	if activeBall == ballNode1:
 		anchoredBall = ballNode1
 		activeBall = ballNode2
