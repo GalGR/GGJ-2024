@@ -11,17 +11,16 @@
 [node name="Balls" parent="." instance=ExtResource( 1 )]
 
 [node name="endArea" parent="." instance=ExtResource( 2 )]
-position = Vector2( 505, 4717 )
-scale = Vector2( 1.62178, 2.47435 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 505, 4669 )
+scale = Vector2( 4.73338, 2.88265 )
 
 [node name="Background" parent="." instance=ExtResource( 3 )]
 scale = Vector2( 1.04166, 1.23844 )
 
 [node name="middle wall2" type="Node2D" parent="."]
-position = Vector2( 1985, 771 )
+position = Vector2( 1811, 699 )
 rotation = 0.282743
+scale = Vector2( 1, 0.654294 )
 
 [node name="Deadly2" parent="middle wall2" instance=ExtResource( 4 )]
 position = Vector2( 56.0117, -8.22681 )
@@ -119,9 +118,111 @@ position = Vector2( -512.339, -16.4053 )
 [node name="Deadly32" parent="middle wall2" instance=ExtResource( 4 )]
 position = Vector2( -938.957, -20.9788 )
 
+[node name="middle wall5" type="Node2D" parent="."]
+position = Vector2( 2243, 831 )
+rotation = 0.282743
+scale = Vector2( 1, 0.604724 )
+
+[node name="Deadly2" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( 56.0117, -8.22681 )
+
+[node name="Deadly3" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( 115.538, -11.4893 )
+
+[node name="Deadly4" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( 178.578, -9.78687 )
+
+[node name="Deadly5" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( 240.719, -7.64868 )
+
+[node name="Deadly6" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( 301.523, -5.97485 )
+
+[node name="Deadly7" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( 365.464, -4.70825 )
+
+[node name="Deadly8" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( 417.761, -2.24902 )
+
+[node name="Deadly" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( -8.85736, -6.82251 )
+
+[node name="Deadly9" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( 540.327, -3.80859 )
+
+[node name="Deadly10" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( 599.853, -7.07104 )
+
+[node name="Deadly11" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( 662.893, -5.36865 )
+
+[node name="Deadly12" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( 725.034, -3.23047 )
+
+[node name="Deadly13" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( 785.838, -1.55664 )
+
+[node name="Deadly14" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( 849.779, -0.290039 )
+
+[node name="Deadly15" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( 902.076, 2.16919 )
+
+[node name="Deadly16" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( 475.458, -2.4043 )
+
+[node name="Deadly17" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( -408.645, -11.0508 )
+
+[node name="Deadly18" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( -349.119, -14.3132 )
+
+[node name="Deadly19" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( -286.079, -12.6108 )
+
+[node name="Deadly20" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( -223.938, -10.4727 )
+
+[node name="Deadly21" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( -163.134, -8.79883 )
+
+[node name="Deadly22" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( -99.1934, -7.53223 )
+
+[node name="Deadly23" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( -46.8965, -5.073 )
+
+[node name="Deadly24" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( -473.514, -9.64648 )
+
+[node name="Deadly25" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( -874.088, -22.3831 )
+
+[node name="Deadly26" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( -814.562, -25.6455 )
+
+[node name="Deadly27" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( -751.521, -23.9431 )
+
+[node name="Deadly28" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( -689.381, -21.8049 )
+
+[node name="Deadly29" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( -628.576, -20.1311 )
+
+[node name="Deadly30" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( -564.636, -18.8645 )
+
+[node name="Deadly31" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( -512.339, -16.4053 )
+
+[node name="Deadly32" parent="middle wall5" instance=ExtResource( 4 )]
+position = Vector2( -938.957, -20.9788 )
+
 [node name="middle wall3" type="Node2D" parent="."]
 position = Vector2( 3091, 2453 )
 rotation = 1.5708
+scale = Vector2( 1, 0.6 )
 
 [node name="Deadly2" parent="middle wall3" instance=ExtResource( 4 )]
 position = Vector2( 56.0117, -8.22681 )
@@ -219,9 +320,111 @@ position = Vector2( -512.339, -16.4053 )
 [node name="Deadly32" parent="middle wall3" instance=ExtResource( 4 )]
 position = Vector2( -938.957, -20.9788 )
 
+[node name="middle wall6" type="Node2D" parent="."]
+position = Vector2( 3103, 2033 )
+rotation = 1.5708
+scale = Vector2( 1, 0.72 )
+
+[node name="Deadly2" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( 56.0117, -8.22681 )
+
+[node name="Deadly3" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( 115.538, -11.4893 )
+
+[node name="Deadly4" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( 178.578, -9.78687 )
+
+[node name="Deadly5" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( 240.719, -7.64868 )
+
+[node name="Deadly6" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( 301.523, -5.97485 )
+
+[node name="Deadly7" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( 365.464, -4.70825 )
+
+[node name="Deadly8" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( 417.761, -2.24902 )
+
+[node name="Deadly" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( -8.85736, -6.82251 )
+
+[node name="Deadly9" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( 540.327, -3.80859 )
+
+[node name="Deadly10" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( 599.853, -7.07104 )
+
+[node name="Deadly11" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( 662.893, -5.36865 )
+
+[node name="Deadly12" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( 725.034, -3.23047 )
+
+[node name="Deadly13" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( 785.838, -1.55664 )
+
+[node name="Deadly14" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( 849.779, -0.290039 )
+
+[node name="Deadly15" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( 902.076, 2.16919 )
+
+[node name="Deadly16" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( 475.458, -2.4043 )
+
+[node name="Deadly17" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( -408.645, -11.0508 )
+
+[node name="Deadly18" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( -349.119, -14.3132 )
+
+[node name="Deadly19" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( -286.079, -12.6108 )
+
+[node name="Deadly20" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( -223.938, -10.4727 )
+
+[node name="Deadly21" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( -163.134, -8.79883 )
+
+[node name="Deadly22" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( -99.1934, -7.53223 )
+
+[node name="Deadly23" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( -46.8965, -5.073 )
+
+[node name="Deadly24" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( -473.514, -9.64648 )
+
+[node name="Deadly25" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( -874.088, -22.3831 )
+
+[node name="Deadly26" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( -814.562, -25.6455 )
+
+[node name="Deadly27" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( -751.521, -23.9431 )
+
+[node name="Deadly28" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( -689.381, -21.8049 )
+
+[node name="Deadly29" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( -628.576, -20.1311 )
+
+[node name="Deadly30" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( -564.636, -18.8645 )
+
+[node name="Deadly31" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( -512.339, -16.4053 )
+
+[node name="Deadly32" parent="middle wall6" instance=ExtResource( 4 )]
+position = Vector2( -938.957, -20.9788 )
+
 [node name="middle wall4" type="Node2D" parent="."]
-position = Vector2( 1948, 4171 )
-rotation = -0.357792
+position = Vector2( 2260, 3799 )
+rotation = -0.47343
+scale = Vector2( 1, 0.782024 )
 
 [node name="Deadly2" parent="middle wall4" instance=ExtResource( 4 )]
 position = Vector2( 56.0117, -8.22681 )
@@ -317,6 +520,107 @@ position = Vector2( -564.636, -18.8645 )
 position = Vector2( -512.339, -16.4053 )
 
 [node name="Deadly32" parent="middle wall4" instance=ExtResource( 4 )]
+position = Vector2( -938.957, -20.9788 )
+
+[node name="middle wall7" type="Node2D" parent="."]
+position = Vector2( 1733, 4068 )
+rotation = -0.47343
+scale = Vector2( 1, 0.767284 )
+
+[node name="Deadly2" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( 56.0117, -8.22681 )
+
+[node name="Deadly3" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( 115.538, -11.4893 )
+
+[node name="Deadly4" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( 178.578, -9.78687 )
+
+[node name="Deadly5" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( 240.719, -7.64868 )
+
+[node name="Deadly6" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( 301.523, -5.97485 )
+
+[node name="Deadly7" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( 365.464, -4.70825 )
+
+[node name="Deadly8" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( 417.761, -2.24902 )
+
+[node name="Deadly" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( -8.85736, -6.82251 )
+
+[node name="Deadly9" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( 540.327, -3.80859 )
+
+[node name="Deadly10" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( 599.853, -7.07104 )
+
+[node name="Deadly11" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( 662.893, -5.36865 )
+
+[node name="Deadly12" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( 725.034, -3.23047 )
+
+[node name="Deadly13" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( 785.838, -1.55664 )
+
+[node name="Deadly14" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( 849.779, -0.290039 )
+
+[node name="Deadly15" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( 902.076, 2.16919 )
+
+[node name="Deadly16" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( 475.458, -2.4043 )
+
+[node name="Deadly17" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( -408.645, -11.0508 )
+
+[node name="Deadly18" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( -349.119, -14.3132 )
+
+[node name="Deadly19" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( -286.079, -12.6108 )
+
+[node name="Deadly20" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( -223.938, -10.4727 )
+
+[node name="Deadly21" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( -163.134, -8.79883 )
+
+[node name="Deadly22" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( -99.1934, -7.53223 )
+
+[node name="Deadly23" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( -46.8965, -5.073 )
+
+[node name="Deadly24" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( -473.514, -9.64648 )
+
+[node name="Deadly25" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( -874.088, -22.3831 )
+
+[node name="Deadly26" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( -814.562, -25.6455 )
+
+[node name="Deadly27" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( -751.521, -23.9431 )
+
+[node name="Deadly28" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( -689.381, -21.8049 )
+
+[node name="Deadly29" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( -628.576, -20.1311 )
+
+[node name="Deadly30" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( -564.636, -18.8645 )
+
+[node name="Deadly31" parent="middle wall7" instance=ExtResource( 4 )]
+position = Vector2( -512.339, -16.4053 )
+
+[node name="Deadly32" parent="middle wall7" instance=ExtResource( 4 )]
 position = Vector2( -938.957, -20.9788 )
 
 [node name="Wall" type="Node2D" parent="."]
@@ -473,7 +777,7 @@ position = Vector2( 2263, -4244 )
 position = Vector2( 2200, -4245 )
 
 [node name="Wall6" type="Node2D" parent="."]
-position = Vector2( 1402, 9076 )
+position = Vector2( 6901, 7544 )
 
 [node name="Obstacle11" parent="Wall6" instance=ExtResource( 5 )]
 position = Vector2( 1019, -4240 )
@@ -870,7 +1174,7 @@ position = Vector2( 4, -3751 )
 position = Vector2( 4, -3689 )
 
 [node name="Wall5" type="Node2D" parent="."]
-position = Vector2( -42, 4212 )
+position = Vector2( -61, 4241 )
 
 [node name="Obstacle28" parent="Wall5" instance=ExtResource( 5 )]
 position = Vector2( 16, 29 )
@@ -1356,7 +1660,7 @@ position = Vector2( 4, -3751 )
 position = Vector2( 4, -3689 )
 
 [node name="Wall4" type="Node2D" parent="."]
-position = Vector2( 276, 4565 )
+position = Vector2( 286, 4498 )
 rotation = 1.5708
 
 [node name="Obstacle28" parent="Wall4" instance=ExtResource( 5 )]
@@ -1598,3 +1902,13 @@ position = Vector2( 361, -3894 )
 
 [node name="Obstacle107" parent="Wall4" instance=ExtResource( 5 )]
 position = Vector2( 361, -3832 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 1593, 845 )
+current = true
+zoom = Vector2( 3.65, 3.65 )
+limit_left = -54
+limit_top = -80
+limit_right = 3659
+limit_bottom = 4947
+editor_draw_limits = true

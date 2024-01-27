@@ -11,10 +11,8 @@
 [node name="Balls" parent="." instance=ExtResource( 1 )]
 
 [node name="endArea" parent="." instance=ExtResource( 2 )]
-position = Vector2( 695, 1431 )
-scale = Vector2( 1.62178, 2.47435 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 677, 1490 )
+scale = Vector2( 4.58916, 3.86734 )
 
 [node name="Background" parent="." instance=ExtResource( 3 )]
 scale = Vector2( 1.04166, 1.23844 )
@@ -201,7 +199,7 @@ position = Vector2( 2263, -4244 )
 position = Vector2( 2200, -4245 )
 
 [node name="WallLeft" type="Node2D" parent="."]
-position = Vector2( -3940, -399 )
+position = Vector2( -3948, -386 )
 rotation = 1.5708
 
 [node name="Obstacle11" parent="WallLeft" instance=ExtResource( 5 )]
@@ -353,3 +351,13 @@ position = Vector2( 2263, -4244 )
 
 [node name="Obstacle61" parent="WallLeft" instance=ExtResource( 5 )]
 position = Vector2( 2200, -4245 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 715, 235 )
+current = true
+zoom = Vector2( 0.9, 0.9 )
+limit_left = 281
+limit_top = -104
+limit_right = 1201
+limit_bottom = 1595
+editor_draw_limits = true
