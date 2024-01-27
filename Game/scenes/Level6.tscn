@@ -99,8 +99,8 @@ margin_bottom = 32.0
 texture = ExtResource( 3 )
 
 [node name="Obstacle6" type="Node2D" parent="."]
-position = Vector2( 4234, 742 )
-scale = Vector2( 2.28, 19.56 )
+position = Vector2( 3375, 731 )
+scale = Vector2( -1.40234, 20.5269 )
 script = ExtResource( 5 )
 
 [node name="Area2D" type="Area2D" parent="Obstacle6"]
@@ -185,7 +185,7 @@ rect_scale = Vector2( 0.494728, 0.476001 )
 color = Color( 0, 1, 0, 0.266667 )
 
 [node name="Button" type="Node2D" parent="."]
-position = Vector2( 3906, 302 )
+position = Vector2( 3674, 308 )
 scale = Vector2( 22.8885, 22.65 )
 script = ExtResource( 6 )
 door = NodePath("../Door")
