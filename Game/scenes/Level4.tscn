@@ -1340,6 +1340,7 @@ position = Vector2( -51.8596, -6.86182 )
 position = Vector2( 8.94482, -5.18799 )
 
 [node name="smallWall4" type="Node2D" parent="."]
+visible = false
 position = Vector2( 731, 2010 )
 rotation = 1.53197
 
@@ -1362,6 +1363,7 @@ position = Vector2( -51.8596, -6.86182 )
 position = Vector2( 8.94482, -5.18799 )
 
 [node name="smallWall6" type="Node2D" parent="."]
+visible = false
 position = Vector2( 512, 2006 )
 rotation = 1.53197
 
@@ -1384,6 +1386,7 @@ position = Vector2( -51.8596, -6.86182 )
 position = Vector2( 8.94482, -5.18799 )
 
 [node name="smallWall7" type="Node2D" parent="."]
+visible = false
 position = Vector2( 274, 1998 )
 rotation = 1.53197
 
