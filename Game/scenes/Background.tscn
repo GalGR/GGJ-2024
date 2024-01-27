@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://images/bricks.png" type="Texture" id=1]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Sprite" type="Sprite" parent="Control"]
+scale = Vector2( 1.38233, 1.07139 )
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 0, 0, 256, 256 )
