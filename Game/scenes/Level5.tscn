@@ -1,0 +1,242 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://prefabs/Balls.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/Obstacle.gd" type="Script" id=2]
+[ext_resource path="res://scenes/Background.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/endArea.gd" type="Script" id=6]
+[ext_resource path="res://images/SpikesRect.png" type="Texture" id=7]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 28.375, 29.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+[node name="LevelRoot" type="Node2D"]
+position = Vector2( 14, 208 )
+
+[node name="Obstacle" type="Node2D" parent="."]
+position = Vector2( 4075, -3221 )
+scale = Vector2( 2.28, 82.08 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Obstacle"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle/Area2D"]
+position = Vector2( 8.375, -3.5 )
+shape = SubResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="Obstacle/Area2D/CollisionShape2D"]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 7 )
+
+[node name="Obstacle4" type="Node2D" parent="."]
+position = Vector2( 9275, -3545 )
+scale = Vector2( 2.28, 75.28 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Obstacle4"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle4/Area2D"]
+position = Vector2( 8.375, -3.5 )
+shape = SubResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="Obstacle4/Area2D/CollisionShape2D"]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 7 )
+
+[node name="Obstacle2" type="Node2D" parent="."]
+position = Vector2( 5095, -530 )
+scale = Vector2( 81.04, 1 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Obstacle2"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle2/Area2D"]
+position = Vector2( 8.375, -3.5 )
+shape = SubResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="Obstacle2/Area2D/CollisionShape2D"]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 7 )
+
+[node name="Obstacle3" type="Node2D" parent="."]
+position = Vector2( 8157, -3225 )
+scale = Vector2( 26.8192, -0.482782 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Obstacle3"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle3/Area2D"]
+position = Vector2( 8.375, -3.5 )
+shape = SubResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="Obstacle3/Area2D/CollisionShape2D"]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 7 )
+
+[node name="Obstacle5" type="Node2D" parent="."]
+position = Vector2( 4660, -3212 )
+scale = Vector2( 23.5392, -0.482782 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Obstacle5"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle5/Area2D"]
+position = Vector2( 8.375, -3.5 )
+shape = SubResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="Obstacle5/Area2D/CollisionShape2D"]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 7 )
+
+[node name="Obstacle8" type="Node2D" parent="."]
+position = Vector2( 7933, -2400 )
+rotation = 0.785398
+scale = Vector2( 30.0962, 1 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Obstacle8"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle8/Area2D"]
+position = Vector2( 8.375, -3.5 )
+shape = SubResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="Obstacle8/Area2D/CollisionShape2D"]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 7 )
+
+[node name="Obstacle9" type="Node2D" parent="."]
+position = Vector2( 7113, -1996 )
+rotation = 1.21824
+scale = Vector2( 30.0962, 1 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Obstacle9"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle9/Area2D"]
+position = Vector2( 8.375, -3.5 )
+shape = SubResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="Obstacle9/Area2D/CollisionShape2D"]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 7 )
+
+[node name="Obstacle10" type="Node2D" parent="."]
+position = Vector2( 6185, -1875 )
+rotation = 1.72788
+scale = Vector2( 30.0962, 1 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Obstacle10"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle10/Area2D"]
+position = Vector2( 8.375, -3.5 )
+shape = SubResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="Obstacle10/Area2D/CollisionShape2D"]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 7 )
+
+[node name="Obstacle11" type="Node2D" parent="."]
+position = Vector2( 5324, -2238 )
+rotation = 2.22529
+scale = Vector2( 30.0962, 1 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Obstacle11"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle11/Area2D"]
+position = Vector2( 8.375, -3.5 )
+shape = SubResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="Obstacle11/Area2D/CollisionShape2D"]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 7 )
+
+[node name="endArea" type="Node2D" parent="."]
+position = Vector2( 9587, -816 )
+scale = Vector2( 11.1498, 10.1382 )
+script = ExtResource( 6 )
+
+[node name="Area2D" type="Area2D" parent="endArea"]
+scale = Vector2( -20.5386, -19.9684 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="endArea/Area2D"]
+scale = Vector2( 0.50248, 0.2635 )
+shape = SubResource( 4 )
+
+[node name="ColorRect" type="ColorRect" parent="endArea/Area2D/CollisionShape2D"]
+margin_left = -10.3067
+margin_top = -9.3551
+margin_right = 29.6933
+margin_bottom = 30.6449
+rect_scale = Vector2( 0.494728, 0.476001 )
+color = Color( 0, 1, 0, 0.266667 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( 2187, -297 )
+rotation = 3.14159
+scale = Vector2( 8.56828, 8.73806 )
+color = Color( 1, 0, 0.156863, 1 )
+polygon = PoolVector2Array( 23.9362, 89.7606, 24.0691, 58.2447, 9.30851, 58.3777, 29.9202, 40.8245, 50.5319, 58.1117, 34.1755, 58.2447, 33.7766, 89.8936 )
+uv = PoolVector2Array( 23.9362, 89.7606, 24.0691, 58.2447, 7.31383, 58.2447, 31.9149, 36.7021, 50.6649, 57.7128, 35.3723, 57.9787, 33.7766, 89.8936 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+position = Vector2( 696, -1172 )
+rotation = 3.14159
+scale = Vector2( 8.56828, 8.73806 )
+color = Color( 1, 0, 0.156863, 1 )
+polygon = PoolVector2Array( 23.9362, 89.7606, 24.0691, 58.2447, 9.30851, 58.3777, 29.9202, 40.8245, 50.5319, 58.1117, 34.1755, 58.2447, 33.7766, 89.8936 )
+uv = PoolVector2Array( 23.9362, 89.7606, 24.0691, 58.2447, 7.31383, 58.2447, 31.9149, 36.7021, 50.6649, 57.7128, 35.3723, 57.9787, 33.7766, 89.8936 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 4778, -5807 )
+current = true
+zoom = Vector2( 2.4, 2.4 )
+limit_left = 0
+limit_top = -4011
+limit_right = 2447
+limit_bottom = 660
+editor_draw_screen = false
+editor_draw_limits = true
+
+[node name="Balls" parent="." instance=ExtResource( 1 )]
+position = Vector2( 6555, -5065 )
+
+[node name="Background" parent="." instance=ExtResource( 3 )]
