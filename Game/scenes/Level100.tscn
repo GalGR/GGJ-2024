@@ -316,5 +316,3 @@ margin_right = 53.8684
 margin_bottom = 54.0364
 rect_scale = Vector2( 0.314963, 0.311225 )
 texture = ExtResource( 7 )
-
-[node name="Balls" parent="." instance=ExtResource( 1 )]
