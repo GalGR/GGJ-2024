@@ -57,8 +57,9 @@ func switch_balls()->void:
 	anchoredBall.set_active(false)
 	activeBall.set_active(true)
 	activeBall.init_anchor(anchoredBall)
-	var particles = load("res://scenes/BallAnchoredParticles.tscn").instance()
+	var particles:Particles2D = load("res://scenes/BallAnchoredParticles.tscn").instance()
 	particles.position = anchoredBall.position
+	particles.emitting = true
 	get_parent().get_parent().add_child(particles)
 	
 	#ball_anchored_particles.position = anchoredBall.position
