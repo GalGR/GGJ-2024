@@ -26,6 +26,7 @@ func _ready():
 		print ("got camera")
 		camera.reset_smoothing();
 		camera.position = anchoredBall.position
+		camera.smoothing_enabled = true
 	else:
 		print ("did not get camera")
 	
@@ -35,6 +36,7 @@ func _process(delta):
 	if Globals.play_scene_running:
 		game_input()
 		updateThread()
+		camera.position = anchoredBall.position
 
 func game_input()->void:
 	var dir:float = 0
